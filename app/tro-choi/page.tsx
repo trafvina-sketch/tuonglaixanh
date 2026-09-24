@@ -129,16 +129,16 @@ export default function GameHubPage() {
     <div className="space-y-6 sm:space-y-8 max-w-6xl mx-auto pb-12">
       
       {/* 1. HEADER KHU VỰC TRÒ CHƠI HOÀNH TRÁNG */}
-      <div className="bg-gradient-to-r from-[#1e3a8a] via-[#0369a1] to-[#0284c7] text-white rounded-3xl p-6 sm:p-8 shadow-md relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="bg-gradient-to-r from-purple-950 via-rose-950 to-pink-900 text-white rounded-3xl p-6 sm:p-8 shadow-md relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-rose-500/30">
         <div className="space-y-2 z-10 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs font-bold text-sky-200">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs font-bold text-amber-200">
             <Gamepad2 className="w-4 h-4 text-amber-300" />
             <span>Tổ Hợp 8 Trò Chơi Giáo Dục Học Đường Đỉnh Cao</span>
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white drop-shadow-xs">
             Đấu Trường Trò Chơi Học Đường
           </h1>
-          <p className="text-xs sm:text-sm text-sky-100 leading-relaxed font-medium">
+          <p className="text-xs sm:text-sm text-rose-100 leading-relaxed font-medium">
             Vừa học vừa chơi, rèn luyện bản lĩnh! 8 mini game tương tác phong phú giúp học sinh nhận diện ma túy ngụy trang, luyện phản xạ và làm chủ kỹ năng tự vệ.
           </p>
         </div>
@@ -174,8 +174,8 @@ export default function GameHubPage() {
         </div>
 
         {/* TRANG TRÍ HÌNH HỌC NỀN */}
-        <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-        <div className="absolute left-1/3 -top-12 w-40 h-40 bg-sky-400/20 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-rose-500/20 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute left-1/3 -top-12 w-40 h-40 bg-amber-400/20 rounded-full blur-2xl pointer-events-none" />
       </div>
 
       {/* 2. THANH LỰA CHỌN 8 TRÒ CHƠI THEO LƯỚI (2 HÀNG x 4 CỘT) */}
@@ -201,8 +201,8 @@ export default function GameHubPage() {
                 }}
                 className={`p-3 rounded-2xl border text-left transition-all flex flex-col justify-between gap-1.5 cursor-pointer shadow-xs ${
                   isActive
-                    ? "bg-white border-[#0284c7] ring-2 ring-sky-500/25 shadow-md scale-102"
-                    : "bg-white hover:bg-slate-50 border-slate-200/80 text-slate-600 hover:border-sky-300"
+                    ? "bg-white border-rose-500 ring-2 ring-rose-400/25 shadow-md scale-102"
+                    : "bg-white hover:bg-rose-50/40 border-slate-200/80 text-slate-600 hover:border-rose-300"
                 }`}
               >
                 <div className="flex items-center justify-between gap-1">
@@ -213,7 +213,7 @@ export default function GameHubPage() {
                 </div>
                 <div>
                   <h3 className={`font-extrabold text-xs sm:text-[13px] leading-tight ${
-                    isActive ? "text-[#0284c7]" : "text-slate-800"
+                    isActive ? "text-rose-600" : "text-slate-800"
                   }`}>
                     {tab.title}
                   </h3>
@@ -296,20 +296,20 @@ export default function GameHubPage() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
         <Link
           href="/nhan-dien"
-          className="p-4 rounded-2xl bg-white border border-slate-200/80 hover:border-sky-300 shadow-2xs hover:shadow-sm transition-all flex items-center justify-between group"
+          className="p-4 rounded-2xl bg-white border border-slate-200/80 hover:border-rose-300 shadow-2xs hover:shadow-sm transition-all flex items-center justify-between group"
         >
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0284c7] flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
               <BookOpen className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="font-extrabold text-xs text-slate-800 group-hover:text-[#0284c7] transition-colors">
+              <h4 className="font-extrabold text-xs text-slate-800 group-hover:text-rose-600 transition-colors">
                 Nhận Diện Ma Túy
               </h4>
               <p className="text-[10px] text-slate-500">Xem ảnh phóng to & cách thức ngụy trang</p>
             </div>
           </div>
-          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#0284c7] group-hover:translate-x-1 transition-all" />
+          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-rose-600 group-hover:translate-x-1 transition-all" />
         </Link>
 
         <Link

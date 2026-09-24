@@ -227,9 +227,9 @@ export default function FloatingTrangTiChat() {
         <div className="w-[330px] sm:w-[380px] h-[480px] sm:h-[520px] bg-white border border-slate-200/90 rounded-3xl shadow-2xl flex flex-col overflow-hidden mb-3 animate-in fade-in slide-in-from-bottom-5 duration-200">
           
           {/* HEADER POPUP HIỆN ĐẠI */}
-          <div className="bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-600 text-white p-3.5 border-b border-indigo-500/40 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white p-3.5 border-b border-rose-400/40 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-cyan-200 shadow-xs shrink-0 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-rose-200 shadow-xs shrink-0 flex items-center justify-center">
                 <img
                   src="/trolyai.png"
                   alt="Trợ Lý AI"
@@ -245,7 +245,7 @@ export default function FloatingTrangTiChat() {
                     ẨN DANH
                   </span>
                 </div>
-                <p className="text-[9px] text-sky-100 font-medium">Bảo vệ học đường • Luôn bên bạn</p>
+                <p className="text-[9px] text-rose-100 font-medium">Người bạn lắng nghe • Luôn bên bạn 💖</p>
               </div>
             </div>
 
@@ -279,14 +279,14 @@ export default function FloatingTrangTiChat() {
           )}
 
           {/* DANH SÁCH TIN NHẮN */}
-          <div className="flex-1 p-3 overflow-y-auto space-y-3 bg-slate-50/70 text-xs">
+          <div className="flex-1 p-3 overflow-y-auto space-y-3 bg-rose-50/20 text-xs">
             {messages.map((m) => (
               <div
                 key={m.id}
                 className={`flex gap-2 ${m.role === "user" ? "justify-end" : "justify-start"} animate-in fade-in duration-200`}
               >
                 {m.role === "assistant" && (
-                  <div className="w-6 h-6 rounded-full overflow-hidden bg-white border border-sky-200 shrink-0 shadow-2xs mt-0.5 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full overflow-hidden bg-white border border-rose-200 shrink-0 shadow-2xs mt-0.5 flex items-center justify-center">
                     <img
                       src="/trolyai.png"
                       alt="Trợ Lý AI"
@@ -297,8 +297,8 @@ export default function FloatingTrangTiChat() {
                 <div
                   className={`p-3 rounded-2xl max-w-[85%] leading-relaxed whitespace-pre-line break-words text-xs ${
                     m.role === "user"
-                      ? "bg-gradient-to-r from-[#0284c7] to-[#2563eb] text-white rounded-tr-xs shadow-xs"
-                      : "bg-white text-slate-800 rounded-tl-xs border border-slate-200/80 shadow-2xs"
+                      ? "bg-gradient-to-r from-rose-500 to-pink-600 text-white rounded-tr-xs shadow-xs"
+                      : "bg-white text-slate-800 rounded-tl-xs border border-rose-100 shadow-2xs"
                   }`}
                 >
                   <p>{m.content}</p>
@@ -315,10 +315,10 @@ export default function FloatingTrangTiChat() {
                             key={sIdx}
                             onClick={() => handleSend(sug)}
                             disabled={isLoading}
-                            className="text-[10px] bg-slate-50 hover:bg-sky-50 text-slate-700 hover:text-[#0284c7] border border-slate-200 hover:border-sky-200 p-1.5 rounded-xl font-medium transition-all text-left flex items-center justify-between group cursor-pointer"
+                            className="text-[10px] bg-slate-50 hover:bg-rose-50 text-slate-700 hover:text-rose-600 border border-slate-200 hover:border-rose-200 p-1.5 rounded-xl font-medium transition-all text-left flex items-center justify-between group cursor-pointer"
                           >
                             <span className="truncate">{sug}</span>
-                            <span className="text-slate-400 group-hover:text-[#0284c7] shrink-0 font-bold ml-1">
+                            <span className="text-slate-400 group-hover:text-rose-600 shrink-0 font-bold ml-1">
                               →
                             </span>
                           </button>
@@ -332,8 +332,8 @@ export default function FloatingTrangTiChat() {
 
             {/* THANH TRẠNG THÁI SUY LUẬN TRONG POPUP */}
             {isLoading && statusMessage && (
-              <div className="flex items-center gap-2 text-[11px] text-sky-800 bg-sky-50 border border-sky-200 px-3 py-1.5 rounded-xl animate-in fade-in">
-                <div className="w-3 h-3 border-2 border-sky-600 border-t-transparent rounded-full animate-spin shrink-0" />
+              <div className="flex items-center gap-2 text-[11px] text-rose-800 bg-rose-50 border border-rose-200 px-3 py-1.5 rounded-xl animate-in fade-in">
+                <div className="w-3 h-3 border-2 border-rose-500 border-t-transparent rounded-full animate-spin shrink-0" />
                 <span className="font-semibold text-[10px] truncate">{statusMessage}</span>
               </div>
             )}
@@ -342,20 +342,20 @@ export default function FloatingTrangTiChat() {
           </div>
 
           {/* KHUNG NHẬP TIN NHẮN */}
-          <div className="p-2.5 bg-white border-t border-slate-200/80 flex items-center gap-2">
+          <div className="p-2.5 bg-white border-t border-rose-100 flex items-center gap-2">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
-              placeholder="Bạn có câu hỏi gì về ma túy, pod chill?..."
+              placeholder="Bạn có tâm sự hay băn khoăn gì không?..."
               disabled={isLoading}
-              className="flex-1 bg-slate-50 border border-slate-200 focus:border-[#0284c7] rounded-xl px-3 py-2 text-xs focus:outline-hidden transition-colors disabled:opacity-60"
+              className="flex-1 bg-rose-50/40 border border-rose-200/80 focus:border-rose-400 rounded-xl px-3 py-2 text-xs focus:outline-hidden transition-colors disabled:opacity-60"
             />
             <button
               onClick={() => handleSend()}
               disabled={isLoading || !input.trim()}
-              className="bg-[#0284c7] hover:bg-[#0369a1] text-white p-2 rounded-xl shadow-xs disabled:opacity-50 transition-colors cursor-pointer active:scale-95"
+              className="bg-gradient-to-r from-rose-500 to-amber-500 hover:opacity-90 text-white p-2 rounded-xl shadow-xs disabled:opacity-50 transition-all cursor-pointer active:scale-95"
             >
               <Send className="w-3.5 h-3.5" />
             </button>
@@ -368,16 +368,16 @@ export default function FloatingTrangTiChat() {
       {!isOpen && (
         <div className="relative group">
           {/* Bong bóng gợi mở nhấp nháy */}
-          <div className="hidden sm:block absolute -top-11 right-0 bg-white text-slate-800 text-[11px] font-bold px-3 py-1.5 rounded-2xl border border-slate-200 shadow-md whitespace-nowrap animate-bounce pointer-events-none flex items-center gap-1.5">
-            <span className="w-4 h-4 rounded-full overflow-hidden inline-block shrink-0 bg-sky-50 border border-sky-200">
+          <div className="hidden sm:block absolute -top-11 right-0 bg-white text-slate-800 text-[11px] font-bold px-3 py-1.5 rounded-2xl border border-rose-200 shadow-md whitespace-nowrap animate-bounce pointer-events-none flex items-center gap-1.5">
+            <span className="w-4 h-4 rounded-full overflow-hidden inline-block shrink-0 bg-rose-50 border border-rose-200">
               <img src="/trolyai.png" alt="Trợ lý AI" className="w-full h-full object-cover object-center" />
             </span>
-            <span>Cần tư vấn bí mật không bạn ơi?</span>
+            <span>Cần tâm sự bí mật không bạn ơi? 💖</span>
           </div>
 
           <button
             onClick={() => setIsOpen(true)}
-            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 p-[2.5px] shadow-2xl shadow-indigo-500/35 hover:shadow-cyan-500/45 flex items-center justify-center transition-all hover:scale-110 active:scale-95 cursor-pointer relative overflow-hidden group"
+            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-rose-500 via-pink-500 to-amber-400 p-[2.5px] shadow-2xl shadow-rose-500/35 hover:shadow-pink-500/45 flex items-center justify-center transition-all hover:scale-110 active:scale-95 cursor-pointer relative overflow-hidden group"
             title="Trò chuyện ẩn danh cùng Trợ lý Cố Vấn AI"
           >
             <div className="w-full h-full rounded-full bg-white p-0.5 overflow-hidden">

@@ -279,9 +279,9 @@ export default function HoiTrangTiPage() {
     <div className="max-w-4xl mx-auto space-y-4">
       
       {/* HEADER CỐ VẤN AI HIỆN ĐẠI ĐỒNG BỘ */}
-      <div className="bg-white border border-slate-200/90 rounded-3xl p-4 sm:p-5 shadow-sm flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white border border-rose-100 rounded-3xl p-4 sm:p-5 shadow-sm flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl overflow-hidden bg-white border border-sky-200 shadow-md shadow-sky-500/20 shrink-0 flex items-center justify-center p-0.5">
+          <div className="w-12 h-12 rounded-2xl overflow-hidden bg-white border border-rose-200 shadow-md shadow-rose-500/20 shrink-0 flex items-center justify-center p-0.5">
             <img
               src="/trolyai.png"
               alt="Trợ Lý Cố Vấn"
@@ -290,22 +290,22 @@ export default function HoiTrangTiPage() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-extrabold text-base sm:text-lg text-[#1e3a8a] uppercase tracking-wide">
+              <h1 className="font-extrabold text-base sm:text-lg bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent uppercase tracking-wide">
                 Trợ Lý Cố Vấn Học Đường
               </h1>
-              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-sky-100 text-[#0284c7]">
+              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-rose-100 text-rose-700">
                 ẨN DANH 100%
               </span>
               <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 hidden sm:inline">
                 ● Trực Tuyến 24/7
               </span>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 hidden md:inline-flex items-center gap-1">
-                <ShieldCheck className="w-3 h-3 text-indigo-600" />
-                Lá chắn văn minh
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 hidden md:inline-flex items-center gap-1">
+                <ShieldCheck className="w-3 h-3 text-amber-600" />
+                Lá chắn yêu thương
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
-              Lắng nghe tâm tư • Chỉ dạy kế sách thoát hiểm • Không phán xét
+              Lắng nghe tâm tư • Chỉ dạy kế sách thoát hiểm • Không phán xét 💖
             </p>
           </div>
         </div>
@@ -448,7 +448,7 @@ export default function HoiTrangTiPage() {
         {/* GỢI Ý CÂU HỎI THƯỜNG GẶP BAN ĐẦU */}
         <div className="border-t border-slate-100 pt-3 pb-2 space-y-1.5">
           <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-[#0284c7]" /> Câu hỏi học sinh thường gặp:
+            <Sparkles className="w-3 h-3 text-rose-500" /> Câu hỏi học sinh thường gặp:
           </span>
           <div className="flex flex-wrap gap-1.5">
             {quickQuestions.map((q, idx) => (
@@ -456,7 +456,7 @@ export default function HoiTrangTiPage() {
                 key={idx}
                 onClick={() => handleSend(q)}
                 disabled={isLoading}
-                className="text-[11px] bg-slate-50 hover:bg-sky-50 text-slate-700 hover:text-[#0284c7] border border-slate-200 hover:border-sky-200 px-3 py-1 rounded-full font-medium transition-all shadow-2xs cursor-pointer"
+                className="text-[11px] bg-slate-50 hover:bg-rose-50 text-slate-700 hover:text-rose-600 border border-slate-200 hover:border-rose-200 px-3 py-1 rounded-full font-medium transition-all shadow-2xs cursor-pointer"
               >
                 {q}
               </button>
@@ -489,12 +489,12 @@ export default function HoiTrangTiPage() {
             }}
             placeholder="Bạn có điều gì băn khoăn về ma túy, khói lạ, bị rủ rê? Nhắn cho Ta nhé..."
             disabled={isLoading}
-            className="flex-1 bg-slate-50/80 focus:bg-white border border-slate-200 focus:border-[#0284c7] rounded-2xl px-4 py-2.5 text-xs sm:text-sm focus:outline-hidden transition-all shadow-2xs disabled:opacity-60"
+            className="flex-1 bg-rose-50/30 focus:bg-white border border-rose-200/80 focus:border-rose-400 rounded-2xl px-4 py-2.5 text-xs sm:text-sm focus:outline-hidden transition-all shadow-2xs disabled:opacity-60"
           />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="bg-gradient-to-r from-[#0284c7] to-[#1e40af] hover:from-[#0369a1] hover:to-[#1e3a8a] text-white font-extrabold px-5 py-2.5 rounded-2xl text-xs sm:text-sm shadow-md shadow-sky-500/25 disabled:opacity-50 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
+            className="bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:opacity-95 text-white font-extrabold px-5 py-2.5 rounded-2xl text-xs sm:text-sm shadow-md shadow-rose-500/25 disabled:opacity-50 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
           >
             <Send className="w-4 h-4" />
             <span className="hidden sm:inline">Gửi câu hỏi</span>

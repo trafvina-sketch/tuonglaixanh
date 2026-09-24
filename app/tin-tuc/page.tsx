@@ -38,11 +38,11 @@ export default async function TinTucPage({
       {/* HEADER TRANG TIN TỨC */}
       <div className="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200/80 text-xs font-bold text-[#0284c7]">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-200/80 text-xs font-bold text-rose-700">
             <Newspaper className="w-3.5 h-3.5" />
             <span>Thông tin & Bài viết chính thống</span>
           </div>
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#1e3a8a] tracking-tight uppercase">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent tracking-tight uppercase">
             Tin Tức & Bài Viết Tuyên Truyền
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -66,8 +66,8 @@ export default async function TinTucPage({
               href={tab.href}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all shrink-0 shadow-2xs ${
                 isActive
-                  ? "bg-[#0284c7] text-white shadow-sm shadow-sky-500/25"
-                  : "bg-white hover:bg-slate-50 text-slate-600 border border-slate-200/80 hover:border-sky-300"
+                  ? "bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white shadow-sm shadow-rose-500/25"
+                  : "bg-white hover:bg-rose-50 text-slate-600 border border-slate-200/80 hover:border-rose-300 hover:text-rose-600"
               }`}
             >
               {tab.label}
@@ -78,7 +78,7 @@ export default async function TinTucPage({
 
       {/* DANH SÁCH BÀI VIẾT */}
       {articleList.length === 0 ? (
-        <div className="bg-white border border-slate-200 rounded-3xl p-12 text-center space-y-3">
+        <div className="bg-white border border-rose-100 rounded-3xl p-12 text-center space-y-3">
           <span className="text-4xl">📰</span>
           <h3 className="font-extrabold text-base text-slate-800">Chưa có bài viết trong danh mục này</h3>
           <p className="text-xs text-slate-500 max-w-md mx-auto">
@@ -86,7 +86,7 @@ export default async function TinTucPage({
           </p>
           <Link
             href="/tin-tuc"
-            className="inline-block mt-2 px-4 py-2 rounded-full bg-sky-50 text-[#0284c7] font-bold text-xs hover:bg-sky-100"
+            className="inline-block mt-2 px-4 py-2 rounded-full bg-rose-50 text-rose-600 font-bold text-xs hover:bg-rose-100"
           >
             Quay lại xem tất cả bài viết
           </Link>
@@ -98,15 +98,15 @@ export default async function TinTucPage({
             const thumbUrl = art.thumbnail_webp_url || "/images/news_anti_drug_rally.png";
             const sealBadge =
               art.seal_type === "canhbao"
-                ? { label: "Cảnh báo khẩn", bg: "bg-red-50 text-red-700 border-red-200" }
+                ? { label: "Cảnh báo khẩn", bg: "bg-rose-50 text-rose-700 border-rose-200" }
                 : art.seal_type === "phongve"
                 ? { label: "Kỹ năng phòng vệ", bg: "bg-teal-50 text-teal-700 border-teal-200" }
-                : { label: "Kiến thức", bg: "bg-sky-50 text-sky-700 border-sky-200" };
+                : { label: "Kiến thức", bg: "bg-amber-50 text-amber-700 border-amber-200" };
 
             return (
               <article
                 key={art.id}
-                className="bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
+                className="bg-white border border-rose-100/90 rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
               >
                 <div>
                   {/* ẢNH BÌA BÀI VIẾT */}
@@ -135,7 +135,7 @@ export default async function TinTucPage({
                       </span>
                     </div>
 
-                    <h2 className="font-extrabold text-sm sm:text-base text-slate-900 group-hover:text-[#0284c7] transition-colors leading-snug line-clamp-2">
+                    <h2 className="font-extrabold text-sm sm:text-base text-slate-900 group-hover:text-rose-600 transition-colors leading-snug line-clamp-2">
                       {art.title}
                     </h2>
 
@@ -151,7 +151,7 @@ export default async function TinTucPage({
                 <div className="p-4 sm:p-5 pt-0">
                   <Link
                     href={`/tin-tuc/${art.slug || art.id}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0284c7] group-hover:text-[#0369a1] group-hover:translate-x-1 transition-all"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-rose-600 group-hover:text-pink-600 group-hover:translate-x-1 transition-all"
                   >
                     <span>Đọc bài viết đầy đủ</span>
                     <ArrowRight className="w-3.5 h-3.5" />

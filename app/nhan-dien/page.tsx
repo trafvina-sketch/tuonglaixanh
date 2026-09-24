@@ -147,7 +147,7 @@ export default function NhanDienPage() {
             <ShieldAlert className="w-3.5 h-3.5" />
             <span>Cẩm nang nhận diện ma túy ngụy trang</span>
           </div>
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#1e3a8a] tracking-tight uppercase">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent tracking-tight uppercase">
             Nhận Diện Ma Túy Thế Hệ Mới
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -162,7 +162,7 @@ export default function NhanDienPage() {
       </div>
 
       {/* THANH TÌM KIẾM NHANH LOẠI MA TÚY */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 shadow-2xs">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-3.5 sm:p-4 rounded-2xl border border-rose-100 shadow-2xs">
         <div className="relative w-full sm:max-w-md">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
@@ -170,11 +170,11 @@ export default function NhanDienPage() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Tìm theo tên gọi, tiếng lóng (pod, chali, tem, cỏ...)"
-            className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all placeholder-slate-400"
+            className="w-full pl-10 pr-4 py-2 bg-rose-50/30 border border-rose-200/80 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-rose-400/20 focus:bg-white transition-all placeholder-slate-400"
           />
         </div>
         <div className="text-xs text-slate-500 font-medium self-end sm:self-center">
-          Hiển thị: <strong className="text-[#0284c7]">{filteredCatalog.length}</strong> loại ma túy ngụy trang
+          Hiển thị: <strong className="text-rose-600">{filteredCatalog.length}</strong> loại ma túy ngụy trang
         </div>
       </div>
 
@@ -186,12 +186,12 @@ export default function NhanDienPage() {
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className="bg-white border border-slate-200/80 rounded-3xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between space-y-4 group cursor-pointer hover:border-sky-300 relative"
+              className="bg-white border border-rose-100/90 rounded-3xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between space-y-4 group cursor-pointer hover:border-rose-300 relative"
             >
               {/* PHẦN ĐẦU THẺ: TÊN & HUY HIỆU MỨC ĐỘ ĐỘC */}
-              <div className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3">
+              <div className="flex items-start justify-between gap-3 border-b border-rose-100/80 pb-3">
                 <div>
-                  <h2 className="font-extrabold text-base sm:text-lg text-slate-900 group-hover:text-[#0284c7] transition-colors leading-snug flex items-center gap-1.5">
+                  <h2 className="font-extrabold text-base sm:text-lg text-slate-900 group-hover:text-rose-600 transition-colors leading-snug flex items-center gap-1.5">
                     <span>{item.name}</span>
                     <Info className="w-3.5 h-3.5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h2>
@@ -278,7 +278,7 @@ export default function NhanDienPage() {
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>Không thử dù chỉ 1 lần!</span>
                 </div>
-                <span className="font-bold text-[#0284c7] group-hover:text-[#0369a1] flex items-center gap-1 group-hover:translate-x-0.5 transition-all">
+                <span className="font-bold text-rose-600 group-hover:text-pink-600 flex items-center gap-1 group-hover:translate-x-0.5 transition-all">
                   <span>Xem chi tiết</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
@@ -297,13 +297,13 @@ export default function NhanDienPage() {
           onClick={() => setSelectedItem(null)}
         >
           <div 
-            className="relative bg-white border border-slate-200/90 rounded-3xl p-5 sm:p-8 max-w-2xl w-full shadow-2xl space-y-5 my-8 max-h-[90vh] overflow-y-auto"
+            className="relative bg-white border border-rose-100 rounded-3xl p-5 sm:p-8 max-w-2xl w-full shadow-2xl space-y-5 my-8 max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* NÚT ĐÓNG MODAL */}
             <button
               onClick={() => setSelectedItem(null)}
-              className="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors z-10"
+              className="absolute top-4 right-4 w-9 h-9 rounded-full bg-rose-50 hover:bg-rose-100 text-slate-600 flex items-center justify-center transition-colors z-10"
               title="Đóng (Phím Esc)"
             >
               <X className="w-5 h-5" />
@@ -315,7 +315,7 @@ export default function NhanDienPage() {
                 <span
                   className={`text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full border ${
                     selectedItem.danger_level === "extreme"
-                      ? "bg-red-50 text-red-700 border-red-200"
+                      ? "bg-rose-50 text-rose-700 border-rose-200"
                       : "bg-amber-50 text-amber-800 border-amber-200"
                   }`}
                 >
@@ -323,7 +323,7 @@ export default function NhanDienPage() {
                 </span>
                 <span className="text-xs text-slate-400 font-medium">Mã nhận diện: #{selectedItem.order_index}</span>
               </div>
-              <h2 className="text-xl sm:text-2xl font-black text-[#1e3a8a] tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-black bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent tracking-tight">
                 {selectedItem.name}
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 font-medium">
@@ -386,7 +386,7 @@ export default function NhanDienPage() {
 
             {/* KHỐI 3: DẤU HIỆU CẢNH BÁO KHẨN CẤP */}
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-1.5 text-xs text-slate-700">
-              <h3 className="font-extrabold text-[#1e3a8a] uppercase tracking-wide flex items-center gap-1.5">
+              <h3 className="font-extrabold text-rose-900 uppercase tracking-wide flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 3. Khẩu quyết phòng vệ học đường:
               </h3>
@@ -405,7 +405,7 @@ export default function NhanDienPage() {
                   <PhoneCall className="w-3.5 h-3.5" /> 111 (Trẻ em)
                 </a>
                 <span>•</span>
-                <a href="tel:113" className="text-[#0284c7] hover:underline flex items-center gap-1">
+                <a href="tel:113" className="text-rose-600 hover:underline flex items-center gap-1">
                   <PhoneCall className="w-3.5 h-3.5" /> 113 (Công an)
                 </a>
               </div>
@@ -413,7 +413,7 @@ export default function NhanDienPage() {
               <div className="flex items-center gap-2 w-full sm:w-auto">
                 <Link
                   href="/khao-thi"
-                  className="flex-1 sm:flex-initial bg-gradient-to-r from-[#0284c7] to-[#1e3a8a] text-white font-extrabold text-xs px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-1.5"
+                  className="flex-1 sm:flex-initial bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white font-extrabold text-xs px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-1.5"
                 >
                   <span>Thử thách giải ải này</span>
                   <ArrowRight className="w-3.5 h-3.5" />

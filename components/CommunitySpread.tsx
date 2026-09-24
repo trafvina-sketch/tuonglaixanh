@@ -244,21 +244,21 @@ export default function CommunitySpread() {
     <div id="lan-toa" className="md:col-span-5 bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
       
       {/* 1. HEADER CỘNG ĐỒNG LAN TỎA */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3.5">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-rose-100 pb-3.5">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-[#1e3a8a] to-[#0284c7] text-white flex items-center justify-center shadow-xs">
-            <span className="text-lg">🌐</span>
+          <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-rose-500 via-pink-500 to-amber-400 text-white flex items-center justify-center shadow-xs shadow-rose-500/20">
+            <span className="text-lg">💖</span>
           </div>
           <div>
-            <h3 className="font-extrabold text-sm sm:text-base uppercase text-[#1e3a8a] tracking-wide flex items-center gap-1.5">
+            <h3 className="font-extrabold text-sm sm:text-base uppercase bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent tracking-wide flex items-center gap-1.5">
               <span>Cùng Nhau Lan Tỏa</span>
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black bg-rose-50 text-rose-600 border border-rose-200">
                 <Flame className="w-3 h-3 fill-rose-500 mr-0.5" />
-                Đồng hành
+                Yêu thương
               </span>
             </h3>
             <p className="text-[11px] text-slate-500 font-medium">
-              Đã có <span className="font-bold text-[#0284c7]">{totalCount.toLocaleString("vi-VN")}+</span> Thầy Cô & Học sinh tham gia ký cam kết
+              Đã có <span className="font-bold text-rose-600">{totalCount.toLocaleString("vi-VN")}+</span> Thầy Cô & Học sinh tham gia ký cam kết
             </p>
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function CommunitySpread() {
           <button
             type="button"
             onClick={() => setShowShareModal(true)}
-            className="px-3 py-1.5 rounded-xl border border-slate-200 hover:border-sky-300 bg-slate-50 hover:bg-sky-50 text-slate-700 hover:text-[#0284c7] text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs"
+            className="px-3 py-1.5 rounded-xl border border-rose-200 hover:border-rose-300 bg-rose-50/60 hover:bg-rose-50 text-slate-700 hover:text-rose-600 text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs"
             title="Chia sẻ lên mạng xã hội"
           >
             <Share2 className="w-3.5 h-3.5" />
@@ -278,9 +278,9 @@ export default function CommunitySpread() {
           <button
             type="button"
             onClick={() => setShowPledgeModal(true)}
-            className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#0284c7] to-[#1e3a8a] hover:from-[#0369a1] hover:to-[#172554] text-white text-xs font-bold transition-all shadow-sm shadow-sky-500/25 flex items-center gap-1.5 cursor-pointer active:scale-95"
+            className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:opacity-95 text-white text-xs font-bold transition-all shadow-sm shadow-rose-500/25 flex items-center gap-1.5 cursor-pointer active:scale-95"
           >
-            <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: "3s" }} />
+            <Sparkles className="w-3.5 h-3.5 text-amber-200 animate-spin" style={{ animationDuration: "3s" }} />
             <span>Ký Cam Kết</span>
           </button>
         </div>

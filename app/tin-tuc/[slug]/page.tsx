@@ -139,11 +139,11 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
     <div className="space-y-6 sm:space-y-8">
       {/* BREADCRUMB ĐIỀU HƯỚNG BÁO CHÍ */}
       <nav className="flex items-center gap-1.5 text-xs text-slate-500 overflow-x-auto pb-1">
-        <Link href="/" className="hover:text-[#0284c7] shrink-0 font-medium transition-colors">
+        <Link href="/" className="hover:text-rose-600 shrink-0 font-medium transition-colors">
           Trang chủ
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-        <Link href="/tin-tuc" className="hover:text-[#0284c7] shrink-0 font-medium transition-colors">
+        <Link href="/tin-tuc" className="hover:text-rose-600 shrink-0 font-medium transition-colors">
           Bản tin học đường
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
@@ -239,17 +239,17 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
             {/* NỘI DUNG CHI TIẾT BÀI VIẾT (MAGAZINE TYPOGRAPHY) */}
             <div
               className="text-slate-800 text-sm sm:text-base leading-relaxed space-y-4 pt-2
-                [&>h2]:text-xl [&>h2]:sm:text-2xl [&>h2]:font-black [&>h2]:text-[#1e3a8a] [&>h2]:mt-6 [&>h2]:mb-3 [&>h2]:pb-1.5 [&>h2]:border-b [&>h2]:border-slate-100
-                [&>h3]:text-base [&>h3]:sm:text-lg [&>h3]:font-extrabold [&>h3]:text-[#b91c1c] [&>h3]:mt-5 [&>h3]:mb-2
+                [&>h2]:text-xl [&>h2]:sm:text-2xl [&>h2]:font-black [&>h2]:text-rose-700 [&>h2]:mt-6 [&>h2]:mb-3 [&>h2]:pb-1.5 [&>h2]:border-b [&>h2]:border-rose-100
+                [&>h3]:text-base [&>h3]:sm:text-lg [&>h3]:font-extrabold [&>h3]:text-amber-700 [&>h3]:mt-5 [&>h3]:mb-2
                 [&>h4]:text-sm [&>h4]:sm:text-base [&>h4]:font-bold [&>h4]:text-slate-900 [&>h4]:mt-4
                 [&>p]:text-slate-700 [&>p]:leading-relaxed [&>p]:mb-4
                 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ul]:text-slate-700 [&>ul]:mb-4
                 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2 [&>ol]:text-slate-700 [&>ol]:mb-4
                 [&>strong]:text-slate-900 [&>strong]:font-bold
                 [&>em]:italic [&>em]:text-slate-600
-                [&>blockquote]:border-l-4 [&>blockquote]:border-[#0284c7] [&>blockquote]:bg-sky-50/70 [&>blockquote]:pl-4 [&>blockquote]:py-3 [&>blockquote]:rounded-r-xl [&>blockquote]:italic [&>blockquote]:text-sky-950 [&>blockquote]:my-5
-                [&>img]:rounded-2xl [&>img]:shadow-md [&>img]:my-5 [&>img]:border [&>img]:border-slate-100 [&>img]:max-w-full [&>img]:mx-auto
-                [&>hr]:my-8 [&>hr]:border-slate-200"
+                [&>blockquote]:border-l-4 [&>blockquote]:border-rose-400 [&>blockquote]:bg-rose-50/70 [&>blockquote]:pl-4 [&>blockquote]:py-3 [&>blockquote]:rounded-r-xl [&>blockquote]:italic [&>blockquote]:text-rose-950 [&>blockquote]:my-5
+                [&>img]:rounded-2xl [&>img]:shadow-md [&>img]:my-5 [&>img]:border [&>img]:border-rose-100 [&>img]:max-w-full [&>img]:mx-auto
+                [&>hr]:my-8 [&>hr]:border-rose-100"
               dangerouslySetInnerHTML={{ __html: renderedContent }}
             />
 
@@ -306,56 +306,56 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
         ======================================================== */}
         <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
           {/* WIDGET 1: HỎI TRẠNG TÍ AI VỀ BÀI VIẾT */}
-          <div className="bg-gradient-to-br from-[#1e3a8a] to-[#0284c7] text-white rounded-3xl p-5 sm:p-6 shadow-sm border border-sky-800/20 space-y-4">
+          <div className="bg-gradient-to-br from-rose-500 via-pink-500 to-amber-500 text-white rounded-3xl p-5 sm:p-6 shadow-md border border-rose-300/30 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl overflow-hidden bg-white border border-white/30 flex items-center justify-center shadow-xs shrink-0 p-0.5">
                 <img src="/trolyai.png" alt="Trạng Tí AI" className="w-full h-full object-cover object-top rounded-xl" />
               </div>
               <div>
                 <h3 className="font-black text-sm uppercase tracking-wide">Hỏi Trạng Tí AI</h3>
-                <p className="text-[11px] text-sky-200">Cố vấn giải đáp phòng vệ học đường</p>
+                <p className="text-[11px] text-rose-100">Cố vấn giải đáp phòng vệ học đường</p>
               </div>
             </div>
 
-            <p className="text-xs text-sky-100 leading-relaxed">
+            <p className="text-xs text-rose-50 leading-relaxed">
               Em còn băn khoăn về tác hại của thuốc lá điện tử, pod chill hay chưa biết cách từ chối bạn xấu? Hãy hỏi ngay Cố Vấn Trạng Tí!
             </p>
 
             <div className="space-y-2 pt-1">
               <Link
                 href="/hoi-trang-ti?q=Hút thử pod chill 1 hơi thì có bị nghiện không Trạng Tí?"
-                className="block text-left text-xs bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-2.5 transition-all group"
+                className="block text-left text-xs bg-white/15 hover:bg-white/25 border border-white/20 rounded-xl p-2.5 transition-all group"
               >
-                <span className="font-medium text-white group-hover:text-amber-300 transition-colors flex items-center justify-between">
+                <span className="font-medium text-white group-hover:text-amber-200 transition-colors flex items-center justify-between">
                   <span>💭 "Hút pod chill 1 hơi có nghiện không?"</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-white/50 group-hover:translate-x-0.5 transition-transform" />
+                  <ChevronRight className="w-3.5 h-3.5 text-white/70 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </Link>
 
               <Link
                 href="/hoi-trang-ti?q=Làm sao từ chối khi bị bạn bè trong lớp ép hút thuốc lá điện tử?"
-                className="block text-left text-xs bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-2.5 transition-all group"
+                className="block text-left text-xs bg-white/15 hover:bg-white/25 border border-white/20 rounded-xl p-2.5 transition-all group"
               >
-                <span className="font-medium text-white group-hover:text-amber-300 transition-colors flex items-center justify-between">
+                <span className="font-medium text-white group-hover:text-amber-200 transition-colors flex items-center justify-between">
                   <span>🛡️ "Cách từ chối khi bị bạn bè ép hút pod"</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-white/50 group-hover:translate-x-0.5 transition-transform" />
+                  <ChevronRight className="w-3.5 h-3.5 text-white/70 group-hover:translate-x-0.5 transition-transform" />
                 </span>
               </Link>
             </div>
 
             <Link
               href="/hoi-trang-ti"
-              className="w-full inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-black text-xs py-2.5 px-4 rounded-xl shadow-xs transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-rose-50 text-rose-700 font-black text-xs py-2.5 px-4 rounded-xl shadow-xs transition-all"
             >
-              <Sparkles className="w-4 h-4 text-amber-900" />
+              <Sparkles className="w-4 h-4 text-rose-600" />
               <span>Trò chuyện trực tiếp với Trạng Tí</span>
             </Link>
           </div>
 
           {/* WIDGET 2: THẦN CHÚ 3K THOÁT HIỂM */}
-          <div className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm space-y-3.5">
-            <div className="flex items-center gap-2 text-rose-600 border-b border-slate-100 pb-2.5">
-              <ShieldCheck className="w-4 h-4" />
+          <div className="bg-white border border-rose-100 rounded-3xl p-5 shadow-sm space-y-3.5">
+            <div className="flex items-center gap-2 text-rose-600 border-b border-rose-100 pb-2.5">
+              <ShieldCheck className="w-4 h-4 text-rose-500" />
               <h3 className="font-black text-xs sm:text-sm uppercase tracking-wider text-slate-900">
                 Thần Chú 3K Thoát Hiểm
               </h3>
@@ -381,15 +381,15 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
 
           {/* WIDGET 3: BÀI VIẾT TUYÊN TRUYỀN LIÊN QUAN */}
           {relatedArticles && relatedArticles.length > 0 && (
-            <div className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
+            <div className="bg-white border border-rose-100 rounded-3xl p-5 shadow-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-rose-100 pb-2.5">
                 <h3 className="font-black text-xs sm:text-sm uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
-                  <Bookmark className="w-4 h-4 text-[#0284c7]" />
+                  <Bookmark className="w-4 h-4 text-rose-500" />
                   <span>Bài viết cùng chuyên mục</span>
                 </h3>
                 <Link
                   href="/tin-tuc"
-                  className="text-[11px] font-bold text-[#0284c7] hover:underline"
+                  className="text-[11px] font-bold text-rose-600 hover:underline"
                 >
                   Xem tất cả
                 </Link>
@@ -405,7 +405,7 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
                       href={`/tin-tuc/${rel.slug || rel.id}`}
                       className="flex items-start gap-3 group"
                     >
-                      <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-100">
+                      <div className="w-16 h-16 rounded-xl overflow-hidden bg-rose-50 shrink-0 border border-rose-100">
                         <img
                           src={relThumb}
                           alt={rel.title}
@@ -413,7 +413,7 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
                         />
                       </div>
                       <div className="flex-1 min-w-0 space-y-1">
-                        <h4 className="font-bold text-xs text-slate-800 group-hover:text-[#0284c7] transition-colors line-clamp-2 leading-snug">
+                        <h4 className="font-bold text-xs text-slate-800 group-hover:text-rose-600 transition-colors line-clamp-2 leading-snug">
                           {rel.title}
                         </h4>
                         <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
@@ -432,7 +432,7 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
           <div>
             <Link
               href="/tin-tuc"
-              className="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-slate-600 hover:text-[#0284c7] bg-white px-4 py-3 rounded-2xl border border-slate-200 hover:border-slate-300 shadow-2xs transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-slate-600 hover:text-rose-600 bg-white px-4 py-3 rounded-2xl border border-rose-100 hover:border-rose-300 shadow-2xs transition-all"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Quay lại Trang Tin Tức Học Đường</span>

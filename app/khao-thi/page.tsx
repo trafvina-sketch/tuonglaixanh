@@ -191,7 +191,7 @@ export default function KhaoThiPage() {
               <Sparkles className="w-3.5 h-3.5 text-rose-600" />
               <span>Trắc nghiệm tình huống tương tác</span>
             </div>
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#1e3a8a] tracking-tight uppercase">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent tracking-tight uppercase">
               Thử Thách Đấu Trí Phòng Vệ Học Đường
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -199,7 +199,7 @@ export default function KhaoThiPage() {
             </p>
           </div>
 
-          <div className="bg-sky-50 border border-sky-200 rounded-2xl px-4 py-2.5 text-xs text-[#0284c7] font-bold shrink-0 self-start sm:self-auto flex items-center gap-2">
+          <div className="bg-rose-50 border border-rose-200 rounded-2xl px-4 py-2.5 text-xs text-rose-700 font-bold shrink-0 self-start sm:self-auto flex items-center gap-2">
             <Flame className="w-4 h-4 text-amber-500" />
             <span>5 ẢI TÌNH HUỐNG THỰC TẾ</span>
           </div>
@@ -217,13 +217,13 @@ export default function KhaoThiPage() {
                     isPast
                       ? "bg-emerald-500 text-white shadow-sm shadow-emerald-500/20"
                       : isCurrent
-                      ? "bg-gradient-to-r from-[#0284c7] to-[#1e3a8a] text-white ring-4 ring-sky-100 scale-110 shadow-md"
+                      ? "bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white ring-4 ring-rose-100 scale-110 shadow-md"
                       : "bg-slate-100 text-slate-400 border border-slate-200"
                   }`}>
                     {isPast ? "✓" : idx + 1}
                   </div>
                   <span className={`text-[11px] font-bold mt-1.5 text-center truncate max-w-full ${
-                    isCurrent ? "text-[#0284c7]" : isPast ? "text-emerald-700" : "text-slate-400"
+                    isCurrent ? "text-rose-600" : isPast ? "text-emerald-700" : "text-slate-400"
                   }`}>
                     Ải {idx + 1}
                   </span>
@@ -236,7 +236,7 @@ export default function KhaoThiPage() {
 
       {/* KHUNG NỘI DUNG ẢI HIỆN TẠI */}
       {!isCompleted && currentQ && (
-        <section className="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-7 shadow-sm space-y-6">
+        <section className="bg-white border border-rose-100/90 rounded-3xl p-6 sm:p-7 shadow-sm space-y-6">
           
           {/* TIÊU ĐỀ ẢI & ĐIỂM SỐ */}
           <div className="space-y-3">
@@ -244,7 +244,7 @@ export default function KhaoThiPage() {
               <span className="text-xs font-black text-rose-700 uppercase tracking-wider bg-rose-50 px-3 py-1 rounded-full border border-rose-200">
                 Ải số {currentIndex + 1} / {questions.length}
               </span>
-              <span className="text-xs font-bold text-[#0284c7] bg-sky-50 px-3 py-1 rounded-full border border-sky-200/80">
+              <span className="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200/80">
                 Điểm tích lũy: <strong>{score}</strong> / {questions.length}
               </span>
             </div>
@@ -271,7 +271,7 @@ export default function KhaoThiPage() {
                 <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
                   "{currentQ.scenario_story}"
                 </p>
-                <p className="text-xs font-bold text-[#0284c7] pt-1">
+                <p className="text-xs font-bold text-rose-600 pt-1">
                   ❓ Nếu em là người trong cuộc, em sẽ xử trí như thế nào?
                 </p>
               </div>
@@ -286,7 +286,7 @@ export default function KhaoThiPage() {
             <div className="space-y-2.5">
               {currentQ.options.map((opt) => {
                 const isSelected = selectedOptionId === opt.id;
-                let btnClass = "bg-white border-slate-200 hover:border-sky-300 hover:bg-sky-50/40 text-slate-800 shadow-xs";
+                let btnClass = "bg-white border-slate-200 hover:border-rose-300 hover:bg-rose-50/40 text-slate-800 shadow-xs";
 
                 if (hasAnswered) {
                   if (opt.is_correct) {
@@ -333,7 +333,7 @@ export default function KhaoThiPage() {
               } space-y-3`}>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full overflow-hidden bg-white border border-sky-200 shrink-0 shadow-xs flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden bg-white border border-rose-200 shrink-0 shadow-xs flex items-center justify-center">
                     <img
                       src="/trolyai.png"
                       alt="Cố Vấn AI Học Đường"
@@ -358,7 +358,7 @@ export default function KhaoThiPage() {
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
                       {chosenOption.explanation}
                     </p>
-                    <p className="text-xs font-bold text-[#0284c7] pt-1">
+                    <p className="text-xs font-bold text-rose-600 pt-1">
                       💡 Lời Khuyên Cố Vấn: "{currentQ.tip_trang_ti}"
                     </p>
                   </div>
@@ -369,7 +369,7 @@ export default function KhaoThiPage() {
               {/* NÚT TIẾP TỤC VƯỢT ẢI TIẾP THEO */}
               <button
                 onClick={handleNextStage}
-                className="w-full bg-gradient-to-r from-[#0284c7] to-[#1e3a8a] hover:from-[#0369a1] hover:to-[#172554] text-white font-extrabold py-3.5 px-6 rounded-2xl text-xs sm:text-sm shadow-md shadow-sky-500/20 transition-all flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:opacity-95 text-white font-extrabold py-3.5 px-6 rounded-2xl text-xs sm:text-sm shadow-md shadow-rose-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
               >
                 <span>{currentIndex < questions.length - 1 ? `Tiếp Tục Tiến Vào Ải ${currentIndex + 2}` : "Xem Kết Quả & Nhận Giấy Chứng Nhận"}</span>
                 <ChevronRight className="w-4 h-4" />

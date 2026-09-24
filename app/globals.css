@@ -10,15 +10,16 @@
 
 body {
   font-family: var(--font-vietnam);
-  background-color: #F8FAFC;
+  background-color: #FFFDF9;
   background-image: 
-    radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
-    radial-gradient(at 85% 10%, rgba(6, 182, 212, 0.08) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(245, 158, 11, 0.04) 0px, transparent 60%),
-    radial-gradient(#E2E8F0 1.2px, transparent 1.2px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+    radial-gradient(at 10% 10%, rgba(254, 205, 211, 0.45) 0px, transparent 45%),
+    radial-gradient(at 90% 12%, rgba(254, 240, 138, 0.4) 0px, transparent 40%),
+    radial-gradient(at 50% 40%, rgba(233, 213, 255, 0.3) 0px, transparent 50%),
+    radial-gradient(at 85% 85%, rgba(167, 243, 208, 0.35) 0px, transparent 45%),
+    radial-gradient(at 15% 90%, rgba(254, 215, 170, 0.4) 0px, transparent 45%);
+  background-size: 100% 100%;
   background-attachment: fixed;
-  color: #0F172A;
+  color: #1E293B;
   -webkit-font-smoothing: antialiased;
 }
 

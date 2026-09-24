@@ -58,7 +58,7 @@ export default function ToGiacPage() {
             <ShieldAlert className="w-3.5 h-3.5" />
             <span>Kênh tiếp nhận thông tin bảo mật</span>
           </div>
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#1e3a8a] tracking-tight uppercase">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent tracking-tight uppercase">
             Hộp Thư Tố Giác Ẩn Danh
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -73,8 +73,8 @@ export default function ToGiacPage() {
       </div>
 
       {/* CAM KẾT BẢO MẬT & ĐƯỜNG DÂY NÓNG */}
-      <div className="bg-gradient-to-r from-rose-50/70 via-white to-sky-50/70 border border-slate-200/90 rounded-2xl p-4 sm:p-5 text-xs text-slate-700 space-y-3 shadow-2xs">
-        <p className="font-extrabold text-[#1e3a8a] flex items-center gap-1.5 text-xs sm:text-sm">
+      <div className="bg-gradient-to-r from-rose-50/70 via-white to-amber-50/70 border border-rose-100 rounded-2xl p-4 sm:p-5 text-xs text-slate-700 space-y-3 shadow-2xs">
+        <p className="font-extrabold text-rose-900 flex items-center gap-1.5 text-xs sm:text-sm">
           <ShieldCheck className="w-4 h-4 text-emerald-600" />
           CAM KẾT BẢO VỆ DANH TÍNH HỌC SINH TỪ BAN GIÁM HIỆU:
         </p>
@@ -87,7 +87,7 @@ export default function ToGiacPage() {
             <PhoneCall className="w-3.5 h-3.5" /> Tổng đài 111 (Trẻ em)
           </a>
           <span>•</span>
-          <a href="tel:113" className="text-[#0284c7] hover:underline flex items-center gap-1 font-bold">
+          <a href="tel:113" className="text-rose-600 hover:underline flex items-center gap-1 font-bold">
             <PhoneCall className="w-3.5 h-3.5" /> Cảnh sát 113
           </a>
         </div>
@@ -108,18 +108,18 @@ export default function ToGiacPage() {
             onClick={() => setIsSuccess(false)}
             className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-2.5 rounded-xl text-xs shadow-sm shadow-emerald-600/20 transition-all"
           >
-            Gửi thêm báo cáo khác
+            Gửi báo cáo khác
           </button>
         </div>
       ) : (
         /* FORM TỐ GIÁC HIỆN ĐẠI */
         <form
           onSubmit={handleSubmit}
-          className="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm space-y-5"
+          className="bg-white border border-rose-100/90 rounded-3xl p-6 sm:p-8 shadow-sm space-y-5"
         >
           {/* ĐỊA ĐIỂM */}
           <div>
-            <label className="block text-xs font-extrabold text-[#1e3a8a] mb-1.5">
+            <label className="block text-xs font-extrabold text-rose-950 mb-1.5">
               1. Địa điểm nghi vấn phát hiện sự việc: <span className="text-rose-500">*</span>
             </label>
             <input
@@ -128,13 +128,13 @@ export default function ToGiacPage() {
               value={locationText}
               onChange={(e) => setLocationText(e.target.value)}
               placeholder="Ví dụ: Cổng sau trường, Quán trà sữa góc ngã tư, Khu vực nhà vệ sinh tầng 2..."
-              className="w-full bg-slate-50/70 border border-slate-200 rounded-2xl p-3.5 text-xs sm:text-sm focus:bg-white focus:border-sky-500 focus:ring-4 focus:ring-sky-500/10 transition-all placeholder-slate-400 outline-none"
+              className="w-full bg-rose-50/20 border border-rose-200/80 rounded-2xl p-3.5 text-xs sm:text-sm focus:bg-white focus:border-rose-400 focus:ring-4 focus:ring-rose-400/10 transition-all placeholder-slate-400 outline-none"
             />
           </div>
 
           {/* MÔ TẢ CHI TIẾT */}
           <div>
-            <label className="block text-xs font-extrabold text-[#1e3a8a] mb-1.5">
+            <label className="block text-xs font-extrabold text-rose-950 mb-1.5">
               2. Mô tả cụ thể sự việc hoặc đối tượng nghi vấn: <span className="text-rose-500">*</span>
             </label>
             <textarea
@@ -143,13 +143,13 @@ export default function ToGiacPage() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Ví dụ: Có người lạ mặt mời học sinh thử pod màu hồng, hoặc một nhóm bạn đang rủ rê uống gói bột nước xoài lạ..."
-              className="w-full bg-slate-50/70 border border-slate-200 rounded-2xl p-3.5 text-xs sm:text-sm focus:bg-white focus:border-sky-500 focus:ring-4 focus:ring-sky-500/10 transition-all placeholder-slate-400 outline-none"
+              className="w-full bg-rose-50/20 border border-rose-200/80 rounded-2xl p-3.5 text-xs sm:text-sm focus:bg-white focus:border-rose-400 focus:ring-4 focus:ring-rose-400/10 transition-all placeholder-slate-400 outline-none"
             />
           </div>
 
           {/* TẢI ẢNH BẰNG CHỨNG (NÉN WEBP TỰ ĐỘNG) */}
           <div>
-            <label className="block text-xs font-extrabold text-[#1e3a8a] mb-1.5">
+            <label className="block text-xs font-extrabold text-rose-950 mb-1.5">
               3. Tải ảnh bằng chứng (nếu có - Tự động nén WebP siêu nhẹ):
             </label>
             <WebpCanvasConverter
