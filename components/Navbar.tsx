@@ -67,7 +67,9 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-purple-100/90 shadow-xs">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-200/90 shadow-[0_4px_20px_rgba(244,114,182,0.12)]">
+        {/* Dải màu Vũ Trụ Kẹo Ngọt phát sáng đỉnh thanh điều hướng */}
+        <div className="h-1 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-400" />
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 gap-2">
             

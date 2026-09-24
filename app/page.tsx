@@ -288,22 +288,22 @@ export default async function HomePage() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight leading-none drop-shadow-sm flex flex-wrap items-center justify-center sm:justify-start gap-x-2 sm:gap-x-3 gap-y-1 my-1">
                 <span className="text-[#9333ea] inline-flex items-center">
                   NÓI KH
-                  {/* Biểu tượng cấm 🚫 thiết kế tinh xảo 3D */}
-                  <span className="inline-flex items-center justify-center relative w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 border-[3.5px] sm:border-[4.5px] border-[#ec4899] rounded-full mx-1 shadow-xs shrink-0 bg-pink-50/70">
+                  {/* Biểu tượng cấm 🚫 thiết kế tinh xảo 3D Hồng Neon */}
+                  <span className="inline-flex items-center justify-center relative w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 border-[3.5px] sm:border-[4.5px] border-[#ec4899] rounded-full mx-1 shadow-md shadow-pink-500/20 shrink-0 bg-pink-100">
                     <span className="w-full h-0.5 sm:h-1 bg-[#ec4899] rotate-45 rounded-full" />
                   </span>
                   NG
                 </span>
-                <span className="text-slate-800 drop-shadow-xs">
+                <span className="bg-gradient-to-r from-purple-700 via-pink-600 to-purple-900 bg-clip-text text-transparent drop-shadow-xs">
                   VỚI MA TÚY
                 </span>
               </h1>
 
               {/* DẢI BĂNG KHẨU HIỆU: VŨ TRỤ KẸO NGỌT - CHỌN TƯƠNG LAI */}
-              <div className="mt-2.5 sm:mt-3 inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-400 text-white font-black text-xs sm:text-sm uppercase tracking-wider px-5 sm:px-6 py-2 rounded-full shadow-lg shadow-purple-500/25 border border-white/40 ring-2 ring-pink-400/20 hover:scale-[1.02] transition-transform">
-                <span className="text-xs">🪐</span>
+              <div className="mt-2.5 sm:mt-3 inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-500 to-teal-400 text-white font-black text-xs sm:text-sm uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-purple-500/30 border border-white/50 ring-4 ring-pink-400/20 hover:scale-[1.02] transition-transform">
+                <span className="text-sm">🪐</span>
                 <span>VŨ TRỤ KẸO NGỌT - BẢO VỆ MẦM XANH</span>
-                <span className="text-xs">✨</span>
+                <span className="text-sm">✨</span>
               </div>
             </div>
           </div>

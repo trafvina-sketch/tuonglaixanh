@@ -12,11 +12,11 @@ body {
   font-family: var(--font-vietnam);
   background-color: #FAF5FF;
   background-image: 
-    radial-gradient(at 10% 12%, rgba(244, 114, 182, 0.35) 0px, transparent 45%), /* Hồng kẹo bông */
-    radial-gradient(at 88% 10%, rgba(192, 132, 252, 0.4) 0px, transparent 45%),  /* Tím oải hương */
-    radial-gradient(at 50% 45%, rgba(94, 234, 212, 0.3) 0px, transparent 50%),   /* Xanh ngọc dịu */
-    radial-gradient(at 85% 85%, rgba(251, 146, 60, 0.3) 0px, transparent 45%),   /* Cam sáng rực rỡ */
-    radial-gradient(at 15% 88%, rgba(167, 139, 250, 0.35) 0px, transparent 45%); /* Tím pastel */
+    radial-gradient(at 8% 10%, rgba(244, 114, 182, 0.45) 0px, transparent 45%), /* Hồng kẹo bông */
+    radial-gradient(at 90% 8%, rgba(192, 132, 252, 0.5) 0px, transparent 48%),  /* Tím oải hương */
+    radial-gradient(at 50% 38%, rgba(94, 234, 212, 0.38) 0px, transparent 50%),   /* Xanh ngọc dịu */
+    radial-gradient(at 88% 82%, rgba(251, 146, 60, 0.38) 0px, transparent 45%),   /* Cam sáng rực rỡ */
+    radial-gradient(at 12% 85%, rgba(167, 139, 250, 0.45) 0px, transparent 48%); /* Tím pastel */
   background-size: 100% 100%;
   background-attachment: fixed;
   color: #1E293B;
