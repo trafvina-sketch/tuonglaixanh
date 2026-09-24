@@ -35,14 +35,14 @@ export default async function TinTucPage({
 
   return (
     <div className="space-y-6 sm:space-y-8">
-      {/* HEADER TRANG TIN TỨC */}
-      <div className="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      {/* HEADER TRANG TIN TỨC VŨ TRỤ KẸO NGỌT */}
+      <div className="bg-white border border-purple-100/90 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-200/80 text-xs font-bold text-rose-700">
-            <Newspaper className="w-3.5 h-3.5" />
-            <span>Thông tin & Bài viết chính thống</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200/80 text-xs font-bold text-purple-700">
+            <Newspaper className="w-3.5 h-3.5 text-pink-500" />
+            <span>Thông tin & Bài viết chính thống 🪐✨</span>
           </div>
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent tracking-tight uppercase">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-teal-500 bg-clip-text text-transparent tracking-tight uppercase">
             Tin Tức & Bài Viết Tuyên Truyền
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -50,8 +50,8 @@ export default async function TinTucPage({
           </p>
         </div>
 
-        <div className="flex items-center gap-2 self-start md:self-auto bg-amber-50 border border-amber-200 rounded-2xl px-4 py-2.5 text-xs text-amber-900 font-bold shrink-0">
-          <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
+        <div className="flex items-center gap-2 self-start md:self-auto bg-teal-50 border border-teal-200 rounded-2xl px-4 py-2.5 text-xs text-teal-800 font-bold shrink-0">
+          <ShieldCheck className="w-4 h-4 text-teal-600 shrink-0" />
           <span>Thông tin xác thực 100%</span>
         </div>
       </div>
@@ -66,8 +66,8 @@ export default async function TinTucPage({
               href={tab.href}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all shrink-0 shadow-2xs ${
                 isActive
-                  ? "bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white shadow-sm shadow-rose-500/25"
-                  : "bg-white hover:bg-rose-50 text-slate-600 border border-slate-200/80 hover:border-rose-300 hover:text-rose-600"
+                  ? "bg-gradient-to-r from-purple-600 via-pink-500 to-teal-400 text-white shadow-sm shadow-pink-500/25"
+                  : "bg-white hover:bg-purple-50 text-slate-600 border border-slate-200/80 hover:border-purple-300 hover:text-purple-600"
               }`}
             >
               {tab.label}
@@ -106,7 +106,7 @@ export default async function TinTucPage({
             return (
               <article
                 key={art.id}
-                className="bg-white border border-rose-100/90 rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
+                className="bg-white border border-purple-100/90 rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
               >
                 <div>
                   {/* ẢNH BÌA BÀI VIẾT */}
@@ -127,15 +127,15 @@ export default async function TinTucPage({
                   <div className="p-4 sm:p-5 space-y-2">
                     <div className="flex items-center gap-3 text-[11px] text-slate-400 font-medium">
                       <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" /> {dateStr}
+                        <Calendar className="w-3.5 h-3.5 text-purple-400" /> {dateStr}
                       </span>
                       <span>•</span>
                       <span className="flex items-center gap-1">
-                        <Eye className="w-3.5 h-3.5" /> {art.views_count || 1} lượt xem
+                        <Eye className="w-3.5 h-3.5 text-teal-400" /> {art.views_count || 1} lượt xem
                       </span>
                     </div>
 
-                    <h2 className="font-extrabold text-sm sm:text-base text-slate-900 group-hover:text-rose-600 transition-colors leading-snug line-clamp-2">
+                    <h2 className="font-extrabold text-sm sm:text-base text-slate-900 group-hover:text-purple-600 transition-colors leading-snug line-clamp-2">
                       {art.title}
                     </h2>
 
@@ -151,7 +151,7 @@ export default async function TinTucPage({
                 <div className="p-4 sm:p-5 pt-0">
                   <Link
                     href={`/tin-tuc/${art.slug || art.id}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-rose-600 group-hover:text-pink-600 group-hover:translate-x-1 transition-all"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 group-hover:text-pink-600 group-hover:translate-x-1 transition-all"
                   >
                     <span>Đọc bài viết đầy đủ</span>
                     <ArrowRight className="w-3.5 h-3.5" />

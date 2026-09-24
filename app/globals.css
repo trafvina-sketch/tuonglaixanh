@@ -10,45 +10,45 @@
 
 body {
   font-family: var(--font-vietnam);
-  background-color: #FFFDF9;
+  background-color: #FAF5FF;
   background-image: 
-    radial-gradient(at 10% 10%, rgba(254, 205, 211, 0.45) 0px, transparent 45%),
-    radial-gradient(at 90% 12%, rgba(254, 240, 138, 0.4) 0px, transparent 40%),
-    radial-gradient(at 50% 40%, rgba(233, 213, 255, 0.3) 0px, transparent 50%),
-    radial-gradient(at 85% 85%, rgba(167, 243, 208, 0.35) 0px, transparent 45%),
-    radial-gradient(at 15% 90%, rgba(254, 215, 170, 0.4) 0px, transparent 45%);
+    radial-gradient(at 10% 12%, rgba(244, 114, 182, 0.35) 0px, transparent 45%), /* Hồng kẹo bông */
+    radial-gradient(at 88% 10%, rgba(192, 132, 252, 0.4) 0px, transparent 45%),  /* Tím oải hương */
+    radial-gradient(at 50% 45%, rgba(94, 234, 212, 0.3) 0px, transparent 50%),   /* Xanh ngọc dịu */
+    radial-gradient(at 85% 85%, rgba(251, 146, 60, 0.3) 0px, transparent 45%),   /* Cam sáng rực rỡ */
+    radial-gradient(at 15% 88%, rgba(167, 139, 250, 0.35) 0px, transparent 45%); /* Tím pastel */
   background-size: 100% 100%;
   background-attachment: fixed;
   color: #1E293B;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Thanh cuộn phong cách học đường năng động */
+/* Thanh cuộn phong cách học đường vũ trụ kẹo ngọt */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #FAF5FF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #64748B;
+  background: #C084FC;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4F46E5;
+  background: #EC4899;
 }
 
-/* Hiệu ứng kính mờ (glassmorphism) cho thẻ card học đường */
+/* Hiệu ứng kính mờ (glassmorphism) cho thẻ card kẹo ngọt */
 .glass-card {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(226, 232, 240, 0.85);
+  border: 1px solid rgba(243, 232, 255, 0.9);
 }
 
 .text-gradient-brand {
-  background: linear-gradient(135deg, #2563EB 0%, #4F46E5 50%, #06B6D4 100%);
+  background: linear-gradient(135deg, #9333EA 0%, #EC4899 50%, #06B6D4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

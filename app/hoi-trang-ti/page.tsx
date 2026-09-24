@@ -279,9 +279,9 @@ export default function HoiTrangTiPage() {
     <div className="max-w-4xl mx-auto space-y-4">
       
       {/* HEADER CỐ VẤN AI HIỆN ĐẠI ĐỒNG BỘ */}
-      <div className="bg-white border border-rose-100 rounded-3xl p-4 sm:p-5 shadow-sm flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white border border-purple-100 rounded-3xl p-4 sm:p-5 shadow-sm flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl overflow-hidden bg-white border border-rose-200 shadow-md shadow-rose-500/20 shrink-0 flex items-center justify-center p-0.5">
+          <div className="w-12 h-12 rounded-2xl overflow-hidden bg-white border border-purple-200 shadow-md shadow-purple-500/20 shrink-0 flex items-center justify-center p-0.5">
             <img
               src="/trolyai.png"
               alt="Trợ Lý Cố Vấn"
@@ -290,18 +290,18 @@ export default function HoiTrangTiPage() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-extrabold text-base sm:text-lg bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent uppercase tracking-wide">
-                Trợ Lý Cố Vấn Học Đường
+              <h1 className="font-extrabold text-base sm:text-lg bg-gradient-to-r from-purple-700 via-pink-600 to-teal-600 bg-clip-text text-transparent uppercase tracking-wide">
+                Trạng Tí Cố Vấn Học Đường
               </h1>
-              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-rose-100 text-rose-700">
+              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-purple-100 text-purple-700">
                 ẨN DANH 100%
               </span>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 hidden sm:inline">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 hidden sm:inline">
                 ● Trực Tuyến 24/7
               </span>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 hidden md:inline-flex items-center gap-1">
-                <ShieldCheck className="w-3 h-3 text-amber-600" />
-                Lá chắn yêu thương
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-pink-50 border border-pink-200 text-pink-700 hidden md:inline-flex items-center gap-1">
+                <ShieldCheck className="w-3 h-3 text-pink-600" />
+                Vũ trụ diệu kỳ 🪐✨
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
@@ -313,7 +313,7 @@ export default function HoiTrangTiPage() {
         <div className="flex items-center gap-2">
           <button
             onClick={handleClear}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200/80 text-slate-600 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-purple-50 text-slate-600 hover:text-purple-600 transition-colors"
             title="Xóa cuộc trò chuyện để giữ bí mật"
           >
             <Trash2 className="w-3.5 h-3.5" />
@@ -368,7 +368,7 @@ export default function HoiTrangTiPage() {
                 className={`flex gap-3 ${isUser ? "justify-end" : "justify-start"} animate-in fade-in duration-200`}
               >
                 {!isUser && (
-                  <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-sky-200 shrink-0 shadow-xs mt-0.5 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-purple-200 shrink-0 shadow-xs mt-0.5 flex items-center justify-center">
                     <img
                       src="/trolyai.png"
                       alt="Trợ Lý AI"
@@ -380,15 +380,15 @@ export default function HoiTrangTiPage() {
                 <div
                   className={`max-w-[85%] rounded-2xl p-4 text-xs sm:text-sm leading-relaxed ${
                     isUser
-                      ? "bg-gradient-to-r from-[#0284c7] to-[#2563eb] text-white rounded-tr-none shadow-md shadow-sky-500/20"
-                      : "bg-slate-50 text-slate-800 border border-slate-200/80 rounded-tl-none shadow-2xs"
+                      ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-tr-none shadow-md shadow-pink-500/20"
+                      : "bg-slate-50 text-slate-800 border border-purple-100/80 rounded-tl-none shadow-2xs"
                   }`}
                 >
                   <p className="whitespace-pre-line font-normal">{msg.content}</p>
 
                   {/* 3 NÚT GỢI Ý CÂU HỎI TIẾP THEO (FOLLOW-UP SUGGESTIONS) */}
                   {!isUser && msg.suggestions && msg.suggestions.length > 0 && (
-                    <div className="mt-3.5 pt-3 border-t border-slate-200/80 space-y-2">
+                    <div className="mt-3.5 pt-3 border-t border-purple-100 space-y-2">
                       <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1">
                         <Sparkles className="w-3.5 h-3.5 text-amber-500" /> Gợi ý tìm hiểu thêm:
                       </p>
@@ -398,10 +398,10 @@ export default function HoiTrangTiPage() {
                             key={sIdx}
                             onClick={() => handleSend(sug)}
                             disabled={isLoading}
-                            className="text-[11px] bg-white hover:bg-sky-50 text-slate-700 hover:text-[#0284c7] border border-slate-200 hover:border-sky-300 px-3 py-1.5 rounded-full font-medium transition-all shadow-2xs hover:shadow-xs active:scale-95 text-left flex items-center gap-1.5 group cursor-pointer"
+                            className="text-[11px] bg-white hover:bg-purple-50 text-slate-700 hover:text-purple-600 border border-slate-200 hover:border-purple-300 px-3 py-1.5 rounded-full font-medium transition-all shadow-2xs hover:shadow-xs active:scale-95 text-left flex items-center gap-1.5 group cursor-pointer"
                           >
                             <span>{sug}</span>
-                            <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[#0284c7] font-bold">
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity text-purple-600 font-bold">
                               →
                             </span>
                           </button>
@@ -412,7 +412,7 @@ export default function HoiTrangTiPage() {
                 </div>
 
                 {isUser && (
-                  <div className="w-8 h-8 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-xs mt-0.5">
+                  <div className="w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-xs mt-0.5">
                     <User className="w-4 h-4" />
                   </div>
                 )}
@@ -423,20 +423,20 @@ export default function HoiTrangTiPage() {
           {/* THANH TRẠNG THÁI SUY NGHĨ ĐỘNG (REASONING & THINKING PHASE) */}
           {isLoading && statusMessage && (
             <div className="flex gap-3 justify-start items-center animate-in fade-in duration-300">
-              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-sky-200 shrink-0 shadow-xs animate-pulse flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-purple-200 shrink-0 shadow-xs animate-pulse flex items-center justify-center">
                 <img
                   src="/trolyai.png"
                   alt="Trợ Lý AI"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="bg-sky-50/90 border border-sky-200 rounded-2xl rounded-tl-none px-4 py-2.5 text-xs text-sky-900 flex items-center gap-2.5 shadow-2xs">
-                <div className="w-3.5 h-3.5 border-2 border-sky-600 border-t-transparent rounded-full animate-spin shrink-0" />
+              <div className="bg-purple-50/90 border border-purple-200 rounded-2xl rounded-tl-none px-4 py-2.5 text-xs text-purple-900 flex items-center gap-2.5 shadow-2xs">
+                <div className="w-3.5 h-3.5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin shrink-0" />
                 <span className="font-semibold">{statusMessage}</span>
                 <span className="flex gap-0.5">
-                  <span className="w-1 h-1 bg-sky-500 rounded-full animate-bounce [animation-delay:-0.3s]" />
-                  <span className="w-1 h-1 bg-sky-500 rounded-full animate-bounce [animation-delay:-0.15s]" />
-                  <span className="w-1 h-1 bg-sky-500 rounded-full animate-bounce" />
+                  <span className="w-1 h-1 bg-purple-500 rounded-full animate-bounce [animation-delay:-0.3s]" />
+                  <span className="w-1 h-1 bg-purple-500 rounded-full animate-bounce [animation-delay:-0.15s]" />
+                  <span className="w-1 h-1 bg-purple-500 rounded-full animate-bounce" />
                 </span>
               </div>
             </div>
@@ -446,9 +446,9 @@ export default function HoiTrangTiPage() {
         </div>
 
         {/* GỢI Ý CÂU HỎI THƯỜNG GẶP BAN ĐẦU */}
-        <div className="border-t border-slate-100 pt-3 pb-2 space-y-1.5">
+        <div className="border-t border-purple-100 pt-3 pb-2 space-y-1.5">
           <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-rose-500" /> Câu hỏi học sinh thường gặp:
+            <Sparkles className="w-3 h-3 text-pink-500" /> Câu hỏi học sinh thường gặp:
           </span>
           <div className="flex flex-wrap gap-1.5">
             {quickQuestions.map((q, idx) => (
@@ -456,7 +456,7 @@ export default function HoiTrangTiPage() {
                 key={idx}
                 onClick={() => handleSend(q)}
                 disabled={isLoading}
-                className="text-[11px] bg-slate-50 hover:bg-rose-50 text-slate-700 hover:text-rose-600 border border-slate-200 hover:border-rose-200 px-3 py-1 rounded-full font-medium transition-all shadow-2xs cursor-pointer"
+                className="text-[11px] bg-slate-50 hover:bg-purple-50 text-slate-700 hover:text-purple-600 border border-slate-200 hover:border-purple-200 px-3 py-1 rounded-full font-medium transition-all shadow-2xs cursor-pointer"
               >
                 {q}
               </button>
@@ -466,8 +466,8 @@ export default function HoiTrangTiPage() {
 
         {/* CẢNH BÁO LÁ CHẮN AN TOÀN NỘI DUNG */}
         {safetyWarning && (
-          <div className="bg-rose-50 border border-rose-200 text-rose-800 text-xs px-3.5 py-2.5 rounded-2xl flex items-center gap-2 animate-in fade-in duration-200 shadow-xs">
-            <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0" />
+          <div className="bg-pink-50 border border-pink-200 text-pink-800 text-xs px-3.5 py-2.5 rounded-2xl flex items-center gap-2 animate-in fade-in duration-200 shadow-xs">
+            <AlertTriangle className="w-4 h-4 text-pink-600 shrink-0" />
             <span className="font-semibold">{safetyWarning}</span>
           </div>
         )}
@@ -489,12 +489,12 @@ export default function HoiTrangTiPage() {
             }}
             placeholder="Bạn có điều gì băn khoăn về ma túy, khói lạ, bị rủ rê? Nhắn cho Ta nhé..."
             disabled={isLoading}
-            className="flex-1 bg-rose-50/30 focus:bg-white border border-rose-200/80 focus:border-rose-400 rounded-2xl px-4 py-2.5 text-xs sm:text-sm focus:outline-hidden transition-all shadow-2xs disabled:opacity-60"
+            className="flex-1 bg-purple-50/30 focus:bg-white border border-purple-200/80 focus:border-purple-400 rounded-2xl px-4 py-2.5 text-xs sm:text-sm focus:outline-hidden transition-all shadow-2xs disabled:opacity-60"
           />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:opacity-95 text-white font-extrabold px-5 py-2.5 rounded-2xl text-xs sm:text-sm shadow-md shadow-rose-500/25 disabled:opacity-50 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
+            className="bg-gradient-to-r from-pink-500 to-orange-400 hover:opacity-95 text-white font-extrabold px-5 py-2.5 rounded-2xl text-xs sm:text-sm shadow-md shadow-pink-500/25 disabled:opacity-50 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
           >
             <Send className="w-4 h-4" />
             <span className="hidden sm:inline">Gửi câu hỏi</span>

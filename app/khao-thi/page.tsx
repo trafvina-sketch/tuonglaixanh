@@ -217,13 +217,13 @@ export default function KhaoThiPage() {
                     isPast
                       ? "bg-emerald-500 text-white shadow-sm shadow-emerald-500/20"
                       : isCurrent
-                      ? "bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white ring-4 ring-rose-100 scale-110 shadow-md"
+                      ? "bg-gradient-to-r from-purple-600 via-pink-500 to-teal-400 text-white ring-4 ring-purple-100 scale-110 shadow-md"
                       : "bg-slate-100 text-slate-400 border border-slate-200"
                   }`}>
                     {isPast ? "✓" : idx + 1}
                   </div>
                   <span className={`text-[11px] font-bold mt-1.5 text-center truncate max-w-full ${
-                    isCurrent ? "text-rose-600" : isPast ? "text-emerald-700" : "text-slate-400"
+                    isCurrent ? "text-purple-600" : isPast ? "text-teal-700" : "text-slate-400"
                   }`}>
                     Ải {idx + 1}
                   </span>
@@ -236,15 +236,15 @@ export default function KhaoThiPage() {
 
       {/* KHUNG NỘI DUNG ẢI HIỆN TẠI */}
       {!isCompleted && currentQ && (
-        <section className="bg-white border border-rose-100/90 rounded-3xl p-6 sm:p-7 shadow-sm space-y-6">
+        <section className="bg-white border border-purple-100/90 rounded-3xl p-6 sm:p-7 shadow-sm space-y-6">
           
           {/* TIÊU ĐỀ ẢI & ĐIỂM SỐ */}
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-black text-rose-700 uppercase tracking-wider bg-rose-50 px-3 py-1 rounded-full border border-rose-200">
+              <span className="text-xs font-black text-purple-700 uppercase tracking-wider bg-purple-50 px-3 py-1 rounded-full border border-purple-200">
                 Ải số {currentIndex + 1} / {questions.length}
               </span>
-              <span className="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200/80">
+              <span className="text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full border border-purple-200/80">
                 Điểm tích lũy: <strong>{score}</strong> / {questions.length}
               </span>
             </div>

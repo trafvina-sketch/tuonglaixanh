@@ -75,13 +75,13 @@ export default async function VideoPage() {
     <div className="space-y-6 sm:space-y-8">
       
       {/* HEADER HIỆN ĐẠI ĐỒNG BỘ TRANG CHỦ */}
-      <div className="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-white border border-purple-100/80 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-200/80 text-xs font-bold text-rose-700">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200/80 text-xs font-bold text-purple-700">
             <VideoIcon className="w-3.5 h-3.5" />
             <span>Thư viện phim & phóng sự học đường</span>
           </div>
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-rose-700 via-pink-600 to-amber-600 bg-clip-text text-transparent tracking-tight uppercase">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-purple-700 via-pink-600 to-teal-600 bg-clip-text text-transparent tracking-tight uppercase">
             Video & Phóng Sự Cảnh Báo
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -89,8 +89,8 @@ export default async function VideoPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 self-start md:self-auto bg-amber-50 border border-amber-200 rounded-2xl px-4 py-2.5 text-xs text-amber-900 font-bold shrink-0">
-          <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
+        <div className="flex items-center gap-2 self-start md:self-auto bg-teal-50 border border-teal-200 rounded-2xl px-4 py-2.5 text-xs text-teal-900 font-bold shrink-0">
+          <ShieldCheck className="w-4 h-4 text-teal-600 shrink-0" />
           <span>Tư liệu truyền thông chính thống</span>
         </div>
       </div>
@@ -102,10 +102,10 @@ export default async function VideoPage() {
           return (
             <div
               key={vid.id}
-              className="bg-white border border-rose-100/90 rounded-3xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between space-y-4 group"
+              className="bg-white border border-purple-100/90 rounded-3xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between space-y-4 group"
             >
               {/* KHUNG NHÚNG VIDEO YOUTUBE BO TRÒN HIỆN ĐẠI */}
-              <div className="rounded-2xl overflow-hidden shadow-xs border border-rose-200/60 bg-slate-900">
+              <div className="rounded-2xl overflow-hidden shadow-xs border border-purple-200/60 bg-slate-900">
                 <YouTubeEmbed urlOrId={vid.youtube_id || vid.youtube_url} title={vid.title} />
               </div>
 
@@ -115,19 +115,19 @@ export default async function VideoPage() {
                     <span
                       className={`text-[10px] font-black uppercase px-2.5 py-1 rounded-full border shadow-2xs ${
                         isWarning
-                          ? "bg-rose-50 text-rose-700 border-rose-200"
+                          ? "bg-pink-50 text-pink-700 border-pink-200"
                           : "bg-teal-50 text-teal-700 border-teal-200"
                       }`}
                     >
                       {isWarning ? "Cảnh Báo Khẩn" : "Kỹ Năng Thoát Hiểm"}
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium flex items-center gap-1">
-                      <PlayCircle className="w-3.5 h-3.5 text-rose-600" />
+                      <PlayCircle className="w-3.5 h-3.5 text-purple-600" />
                       Trực tuyến YouTube HD
                     </span>
                   </div>
 
-                  <h3 className="font-extrabold text-base sm:text-lg text-slate-900 group-hover:text-rose-600 transition-colors leading-snug">
+                  <h3 className="font-extrabold text-base sm:text-lg text-slate-900 group-hover:text-purple-600 transition-colors leading-snug">
                     {vid.title}
                   </h3>
 
@@ -140,7 +140,7 @@ export default async function VideoPage() {
 
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-medium">
                   <span>Nguồn: VTV24 / ANTV / Bộ Công An</span>
-                  <span className="text-emerald-700 font-bold">● Giáo dục học đường</span>
+                  <span className="text-teal-700 font-bold">● Giáo dục học đường</span>
                 </div>
               </div>
             </div>

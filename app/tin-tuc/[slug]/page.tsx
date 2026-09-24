@@ -236,20 +236,20 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
               </figure>
             )}
 
-            {/* NỘI DUNG CHI TIẾT BÀI VIẾT (MAGAZINE TYPOGRAPHY) */}
+            {/* NỘI DUNG CHI TIẾT BÀI VIẾT (MAGAZINE TYPOGRAPHY VŨ TRỤ KẸO NGỌT) */}
             <div
               className="text-slate-800 text-sm sm:text-base leading-relaxed space-y-4 pt-2
-                [&>h2]:text-xl [&>h2]:sm:text-2xl [&>h2]:font-black [&>h2]:text-rose-700 [&>h2]:mt-6 [&>h2]:mb-3 [&>h2]:pb-1.5 [&>h2]:border-b [&>h2]:border-rose-100
-                [&>h3]:text-base [&>h3]:sm:text-lg [&>h3]:font-extrabold [&>h3]:text-amber-700 [&>h3]:mt-5 [&>h3]:mb-2
+                [&>h2]:text-xl [&>h2]:sm:text-2xl [&>h2]:font-black [&>h2]:text-purple-700 [&>h2]:mt-6 [&>h2]:mb-3 [&>h2]:pb-1.5 [&>h2]:border-b [&>h2]:border-purple-100
+                [&>h3]:text-base [&>h3]:sm:text-lg [&>h3]:font-extrabold [&>h3]:text-pink-600 [&>h3]:mt-5 [&>h3]:mb-2
                 [&>h4]:text-sm [&>h4]:sm:text-base [&>h4]:font-bold [&>h4]:text-slate-900 [&>h4]:mt-4
                 [&>p]:text-slate-700 [&>p]:leading-relaxed [&>p]:mb-4
                 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ul]:text-slate-700 [&>ul]:mb-4
                 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2 [&>ol]:text-slate-700 [&>ol]:mb-4
                 [&>strong]:text-slate-900 [&>strong]:font-bold
                 [&>em]:italic [&>em]:text-slate-600
-                [&>blockquote]:border-l-4 [&>blockquote]:border-rose-400 [&>blockquote]:bg-rose-50/70 [&>blockquote]:pl-4 [&>blockquote]:py-3 [&>blockquote]:rounded-r-xl [&>blockquote]:italic [&>blockquote]:text-rose-950 [&>blockquote]:my-5
-                [&>img]:rounded-2xl [&>img]:shadow-md [&>img]:my-5 [&>img]:border [&>img]:border-rose-100 [&>img]:max-w-full [&>img]:mx-auto
-                [&>hr]:my-8 [&>hr]:border-rose-100"
+                [&>blockquote]:border-l-4 [&>blockquote]:border-pink-400 [&>blockquote]:bg-pink-50/60 [&>blockquote]:pl-4 [&>blockquote]:py-3 [&>blockquote]:rounded-r-xl [&>blockquote]:italic [&>blockquote]:text-purple-950 [&>blockquote]:my-5
+                [&>img]:rounded-2xl [&>img]:shadow-md [&>img]:my-5 [&>img]:border [&>img]:border-purple-100 [&>img]:max-w-full [&>img]:mx-auto
+                [&>hr]:my-8 [&>hr]:border-purple-100"
               dangerouslySetInnerHTML={{ __html: renderedContent }}
             />
 
@@ -259,25 +259,25 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
             {/* HASHTAG / TỪ KHÓA BÀI VIẾT */}
             <div className="flex flex-wrap items-center gap-2 pt-2">
               <span className="text-xs font-bold text-slate-400">Từ khóa:</span>
-              <span className="text-[11px] font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">
+              <span className="text-[11px] font-medium bg-purple-50 text-purple-700 px-2.5 py-1 rounded-full border border-purple-200">
                 #phongchongmatuy
               </span>
-              <span className="text-[11px] font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">
+              <span className="text-[11px] font-medium bg-pink-50 text-pink-700 px-2.5 py-1 rounded-full border border-pink-200">
                 #thuocladientu
               </span>
-              <span className="text-[11px] font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">
+              <span className="text-[11px] font-medium bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full border border-teal-200">
                 #kynangsong
               </span>
-              <span className="text-[11px] font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">
-                #thcsnguyenhonganh
+              <span className="text-[11px] font-medium bg-purple-50 text-purple-700 px-2.5 py-1 rounded-full border border-purple-200">
+                #vutrukeongot
               </span>
             </div>
 
             {/* BANNER ĐƯỜNG DÂY NÓNG CỨU VIỆN KHẨN CẤP DƯỚI BÀI VIẾT */}
             <div className="mt-8 pt-6 border-t border-slate-100">
-              <div className="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 text-white rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+              <div className="bg-gradient-to-r from-purple-700 via-pink-600 to-teal-500 text-white rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
                 <div className="flex items-center gap-3.5 text-center sm:text-left">
-                  <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-xs flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-xs flex items-center justify-center shrink-0 shadow-xs border border-white/20">
                     <ShieldAlert className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -291,7 +291,7 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
                 </div>
                 <a
                   href="tel:111"
-                  className="inline-flex items-center gap-2 bg-white text-red-600 font-black text-xs sm:text-sm px-6 py-3 rounded-full shadow-md hover:bg-red-50 hover:scale-105 active:scale-95 transition-all shrink-0"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 to-orange-400 text-purple-950 font-black text-xs sm:text-sm px-6 py-3 rounded-full shadow-md hover:scale-105 active:scale-95 transition-all shrink-0 cursor-pointer"
                 >
                   <PhoneCall className="w-4 h-4" />
                   <span>GỌI 111 NGAY</span>
@@ -306,18 +306,18 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
         ======================================================== */}
         <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
           {/* WIDGET 1: HỎI TRẠNG TÍ AI VỀ BÀI VIẾT */}
-          <div className="bg-gradient-to-br from-rose-500 via-pink-500 to-amber-500 text-white rounded-3xl p-5 sm:p-6 shadow-md border border-rose-300/30 space-y-4">
+          <div className="bg-gradient-to-br from-purple-700 via-pink-600 to-teal-500 text-white rounded-3xl p-5 sm:p-6 shadow-md border border-purple-300/30 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl overflow-hidden bg-white border border-white/30 flex items-center justify-center shadow-xs shrink-0 p-0.5">
                 <img src="/trolyai.png" alt="Trạng Tí AI" className="w-full h-full object-cover object-top rounded-xl" />
               </div>
               <div>
-                <h3 className="font-black text-sm uppercase tracking-wide">Hỏi Trạng Tí AI</h3>
-                <p className="text-[11px] text-rose-100">Cố vấn giải đáp phòng vệ học đường</p>
+                <h3 className="font-black text-sm uppercase tracking-wide">Hỏi Trạng Tí AI 🪐✨</h3>
+                <p className="text-[11px] text-pink-100">Cố vấn giải đáp phòng vệ học đường</p>
               </div>
             </div>
 
-            <p className="text-xs text-rose-50 leading-relaxed">
+            <p className="text-xs text-pink-50 leading-relaxed">
               Em còn băn khoăn về tác hại của thuốc lá điện tử, pod chill hay chưa biết cách từ chối bạn xấu? Hãy hỏi ngay Cố Vấn Trạng Tí!
             </p>
 
@@ -345,30 +345,30 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
 
             <Link
               href="/hoi-trang-ti"
-              className="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-rose-50 text-rose-700 font-black text-xs py-2.5 px-4 rounded-xl shadow-xs transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-purple-950 font-black text-xs py-2.5 px-4 rounded-xl shadow-xs transition-all cursor-pointer"
             >
-              <Sparkles className="w-4 h-4 text-rose-600" />
+              <Sparkles className="w-4 h-4 text-purple-950" />
               <span>Trò chuyện trực tiếp với Trạng Tí</span>
             </Link>
           </div>
 
           {/* WIDGET 2: THẦN CHÚ 3K THOÁT HIỂM */}
-          <div className="bg-white border border-rose-100 rounded-3xl p-5 shadow-sm space-y-3.5">
-            <div className="flex items-center gap-2 text-rose-600 border-b border-rose-100 pb-2.5">
-              <ShieldCheck className="w-4 h-4 text-rose-500" />
+          <div className="bg-white border border-purple-100 rounded-3xl p-5 shadow-sm space-y-3.5">
+            <div className="flex items-center gap-2 text-purple-700 border-b border-purple-100 pb-2.5">
+              <ShieldCheck className="w-4 h-4 text-pink-500" />
               <h3 className="font-black text-xs sm:text-sm uppercase tracking-wider text-slate-900">
                 Thần Chú 3K Thoát Hiểm
               </h3>
             </div>
 
             <div className="space-y-2.5 text-xs">
-              <div className="p-3 bg-red-50/70 border border-red-200 rounded-xl">
-                <span className="font-black text-red-700 block mb-0.5">1. KHÔNG tò mò</span>
+              <div className="p-3 bg-pink-50/70 border border-pink-200 rounded-xl">
+                <span className="font-black text-pink-700 block mb-0.5">1. KHÔNG tò mò</span>
                 <span className="text-slate-600">Tuyệt đối không nếm thử, không cầm hộ dù chỉ một lần.</span>
               </div>
 
-              <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-xl">
-                <span className="font-black text-amber-800 block mb-0.5">2. KIÊN QUYẾT từ chối</span>
+              <div className="p-3 bg-purple-50/70 border border-purple-200 rounded-xl">
+                <span className="font-black text-purple-800 block mb-0.5">2. KIÊN QUYẾT từ chối</span>
                 <span className="text-slate-600">Nói "Không!" dứt khoát và lập tức rời khỏi nơi có kẻ rủ rê.</span>
               </div>
 
@@ -381,15 +381,15 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
 
           {/* WIDGET 3: BÀI VIẾT TUYÊN TRUYỀN LIÊN QUAN */}
           {relatedArticles && relatedArticles.length > 0 && (
-            <div className="bg-white border border-rose-100 rounded-3xl p-5 shadow-sm space-y-4">
-              <div className="flex items-center justify-between border-b border-rose-100 pb-2.5">
+            <div className="bg-white border border-purple-100 rounded-3xl p-5 shadow-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-purple-100 pb-2.5">
                 <h3 className="font-black text-xs sm:text-sm uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
-                  <Bookmark className="w-4 h-4 text-rose-500" />
+                  <Bookmark className="w-4 h-4 text-pink-500" />
                   <span>Bài viết cùng chuyên mục</span>
                 </h3>
                 <Link
                   href="/tin-tuc"
-                  className="text-[11px] font-bold text-rose-600 hover:underline"
+                  className="text-[11px] font-bold text-purple-600 hover:text-pink-600 hover:underline"
                 >
                   Xem tất cả
                 </Link>
@@ -405,7 +405,7 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
                       href={`/tin-tuc/${rel.slug || rel.id}`}
                       className="flex items-start gap-3 group"
                     >
-                      <div className="w-16 h-16 rounded-xl overflow-hidden bg-rose-50 shrink-0 border border-rose-100">
+                      <div className="w-16 h-16 rounded-xl overflow-hidden bg-purple-50 shrink-0 border border-purple-100">
                         <img
                           src={relThumb}
                           alt={rel.title}
@@ -413,11 +413,11 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
                         />
                       </div>
                       <div className="flex-1 min-w-0 space-y-1">
-                        <h4 className="font-bold text-xs text-slate-800 group-hover:text-rose-600 transition-colors line-clamp-2 leading-snug">
+                        <h4 className="font-bold text-xs text-slate-800 group-hover:text-purple-600 transition-colors line-clamp-2 leading-snug">
                           {rel.title}
                         </h4>
                         <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
-                          <Calendar className="w-3 h-3" />
+                          <Calendar className="w-3 h-3 text-purple-400" />
                           <span>{relDate}</span>
                         </div>
                       </div>
@@ -432,7 +432,7 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
           <div>
             <Link
               href="/tin-tuc"
-              className="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-slate-600 hover:text-rose-600 bg-white px-4 py-3 rounded-2xl border border-rose-100 hover:border-rose-300 shadow-2xs transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-slate-600 hover:text-purple-600 bg-white px-4 py-3 rounded-2xl border border-purple-100 hover:border-purple-300 shadow-2xs transition-all"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Quay lại Trang Tin Tức Học Đường</span>
