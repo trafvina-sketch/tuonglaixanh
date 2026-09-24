@@ -74,20 +74,20 @@ export default function Navbar() {
             {/* LOGO: TẢI ĐỘNG TỪ SETTINGS HOẶC DÙNG HUY HIỆU LÁ CHẮN SANG TRỌNG */}
             <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
               {siteLogo ? (
-                <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden p-0.5 bg-white border-2 border-sky-300 shadow-md shadow-sky-500/20 group-hover:scale-105 group-hover:border-sky-500 transition-all duration-300 shrink-0">
+                <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-all duration-300 shrink-0">
                   <img
                     src={siteLogo}
                     alt="Logo"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover rounded-full bg-white"
                   />
                 </div>
               ) : (
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-[#1e3a8a] to-[#0284c7] text-white flex items-center justify-center shadow-md shadow-sky-500/20 group-hover:scale-105 transition-all duration-300 shrink-0">
-                  <ShieldCheck className="w-6 h-6 text-sky-200" />
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 text-white flex items-center justify-center shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-all duration-300 shrink-0">
+                  <ShieldCheck className="w-6 h-6 text-white" />
                 </div>
               )}
               <div className="flex flex-col">
-                <span className="font-extrabold text-sm sm:text-base text-[#1e3a8a] tracking-tight leading-tight group-hover:text-[#0284c7] transition-colors">
+                <span className="font-extrabold text-sm sm:text-base bg-gradient-to-r from-blue-700 via-indigo-600 to-cyan-600 bg-clip-text text-transparent tracking-tight leading-tight group-hover:opacity-90 transition-opacity">
                   TRƯỜNG HỌC KHÔNG MA TÚY
                 </span>
                 <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium">
@@ -105,10 +105,10 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
                       isActive
-                        ? "bg-[#0284c7] text-white shadow-sm shadow-sky-500/30"
-                        : "text-slate-600 hover:text-[#0284c7] hover:bg-sky-50"
+                        ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 text-white shadow-md shadow-indigo-500/25 scale-[1.02]"
+                        : "text-slate-600 hover:text-indigo-600 hover:bg-indigo-50/80"
                     }`}
                   >
                     <Icon className="w-3.5 h-3.5" />

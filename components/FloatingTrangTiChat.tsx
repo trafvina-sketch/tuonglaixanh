@@ -227,9 +227,9 @@ export default function FloatingTrangTiChat() {
         <div className="w-[330px] sm:w-[380px] h-[480px] sm:h-[520px] bg-white border border-slate-200/90 rounded-3xl shadow-2xl flex flex-col overflow-hidden mb-3 animate-in fade-in slide-in-from-bottom-5 duration-200">
           
           {/* HEADER POPUP HIỆN ĐẠI */}
-          <div className="bg-gradient-to-r from-[#0284c7] via-[#0369a1] to-[#1e40af] text-white p-3.5 border-b border-sky-600 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-600 text-white p-3.5 border-b border-indigo-500/40 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-sky-200 shadow-xs shrink-0 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full overflow-hidden bg-white border border-cyan-200 shadow-xs shrink-0 flex items-center justify-center">
                 <img
                   src="/trolyai.png"
                   alt="Trợ Lý AI"
@@ -377,14 +377,16 @@ export default function FloatingTrangTiChat() {
 
           <button
             onClick={() => setIsOpen(true)}
-            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-2 border-sky-400 p-0.5 shadow-xl shadow-sky-500/30 flex items-center justify-center transition-all hover:scale-105 active:scale-95 cursor-pointer relative overflow-hidden group"
+            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 p-[2.5px] shadow-2xl shadow-indigo-500/35 hover:shadow-cyan-500/45 flex items-center justify-center transition-all hover:scale-110 active:scale-95 cursor-pointer relative overflow-hidden group"
             title="Trò chuyện ẩn danh cùng Trợ lý Cố Vấn AI"
           >
-            <img
-              src="/trolyai.png"
-              alt="Trợ Lý Cố Vấn AI"
-              className="w-full h-full object-cover object-center rounded-full group-hover:scale-110 transition-transform duration-300"
-            />
+            <div className="w-full h-full rounded-full bg-white p-0.5 overflow-hidden">
+              <img
+                src="/trolyai.png"
+                alt="Trợ Lý Cố Vấn AI"
+                className="w-full h-full object-cover object-center rounded-full group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
             <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full animate-pulse z-10" />
           </button>
         </div>

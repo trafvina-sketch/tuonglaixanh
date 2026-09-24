@@ -44,55 +44,55 @@ export default async function HomePage() {
       }
     : undefined;
 
-  // 6 Danh mục hành động nhanh (Quick Action Cards)
+  // 6 Danh mục hành động nhanh (Quick Action Cards sắc nét, hiện đại phong cách học đường)
   const quickCategories = [
     {
       title: "KIẾN THỨC",
       subtitle: "về ma túy",
       href: "/nhan-dien",
       icon: BookOpen,
-      badgeColor: "bg-[#f3e8ff] hover:bg-[#e9d5ff] border-[#e9d5ff] text-[#6b21a8]",
-      iconColor: "text-[#7e22ce] bg-[#fae8ff]",
+      badgeColor: "bg-gradient-to-br from-indigo-50/90 via-white to-blue-50/70 hover:from-indigo-100 hover:to-blue-100 border-indigo-200/90 text-indigo-950 shadow-xs hover:shadow-indigo-500/10",
+      iconColor: "text-white bg-gradient-to-tr from-indigo-600 to-blue-500 shadow-md shadow-indigo-500/30",
     },
     {
       title: "TRẮC NGHIỆM",
-      subtitle: "thử thách",
+      subtitle: "thử thách 60s",
       href: "/khao-thi",
       icon: CheckSquare,
-      badgeColor: "bg-[#ffe4e6] hover:bg-[#fecdd3] border-[#fecdd3] text-[#be123c]",
-      iconColor: "text-[#e11d48] bg-[#ffe4e6]",
+      badgeColor: "bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/70 hover:from-emerald-100 hover:to-teal-100 border-emerald-200/90 text-emerald-950 shadow-xs hover:shadow-emerald-500/10",
+      iconColor: "text-white bg-gradient-to-tr from-emerald-600 to-teal-500 shadow-md shadow-emerald-500/30",
     },
     {
       title: "TRÒ CHƠI",
       subtitle: "đấu trường trí tuệ",
       href: "/tro-choi",
       icon: Gamepad2,
-      badgeColor: "bg-[#fef3c7] hover:bg-[#fde68a] border-[#fde68a] text-[#92400e]",
-      iconColor: "text-[#b45309] bg-[#fef3c7]",
+      badgeColor: "bg-gradient-to-br from-amber-50/90 via-white to-orange-50/70 hover:from-amber-100 hover:to-orange-100 border-amber-200/90 text-amber-950 shadow-xs hover:shadow-amber-500/10",
+      iconColor: "text-white bg-gradient-to-tr from-amber-500 to-orange-500 shadow-md shadow-amber-500/30",
     },
     {
       title: "VIDEO",
-      subtitle: "tuyên truyền",
+      subtitle: "phóng sự cảnh báo",
       href: "/video",
       icon: PlaySquare,
-      badgeColor: "bg-[#ffedd5] hover:bg-[#fed7aa] border-[#fed7aa] text-[#c2410c]",
-      iconColor: "text-[#ea580c] bg-[#ffedd5]",
+      badgeColor: "bg-gradient-to-br from-rose-50/90 via-white to-pink-50/70 hover:from-rose-100 hover:to-pink-100 border-rose-200/90 text-rose-950 shadow-xs hover:shadow-rose-500/10",
+      iconColor: "text-white bg-gradient-to-tr from-rose-500 to-pink-600 shadow-md shadow-rose-500/30",
     },
     {
-      title: "TƯ VẤN",
-      subtitle: "& Hỗ trợ",
+      title: "CỐ VẤN AI",
+      subtitle: "hỗ trợ ẩn danh",
       href: "/hoi-trang-ti",
       icon: MessageCircle,
-      badgeColor: "bg-[#ccfbf1] hover:bg-[#99f6e4] border-[#99f6e4] text-[#0f766e]",
-      iconColor: "text-[#0d9488] bg-[#ccfbf1]",
+      badgeColor: "bg-gradient-to-br from-violet-50/90 via-white to-purple-50/70 hover:from-violet-100 hover:to-purple-100 border-violet-200/90 text-violet-950 shadow-xs hover:shadow-violet-500/10",
+      iconColor: "text-white bg-gradient-to-tr from-violet-600 to-purple-500 shadow-md shadow-violet-500/30",
     },
     {
       title: "BÁO CÁO",
-      subtitle: "ẩn danh",
+      subtitle: "bảo vệ bí mật",
       href: "/to-giac",
       icon: Siren,
-      badgeColor: "bg-[#fee2e2] hover:bg-[#fecaca] border-[#fecaca] text-[#b91c1c]",
-      iconColor: "text-[#dc2626] bg-[#fee2e2]",
+      badgeColor: "bg-gradient-to-br from-red-50/90 via-white to-rose-50/70 hover:from-red-100 hover:to-rose-100 border-red-200/90 text-red-950 shadow-xs hover:shadow-red-500/10",
+      iconColor: "text-white bg-gradient-to-tr from-red-600 to-rose-500 shadow-md shadow-red-500/30",
     },
   ];
 
@@ -381,13 +381,13 @@ export default async function HomePage() {
               className="flex items-center gap-2 group hover:opacity-90 transition-all cursor-pointer"
             >
               <span className="text-lg sm:text-xl group-hover:scale-110 transition-transform">🔥</span>
-              <h2 className="font-extrabold text-sm sm:text-base text-[#1e3a8a] group-hover:text-[#0284c7] uppercase tracking-wide transition-colors">
+              <h2 className="font-extrabold text-sm sm:text-base bg-gradient-to-r from-blue-700 via-indigo-600 to-cyan-600 bg-clip-text text-transparent uppercase tracking-wide transition-colors">
                 Tin Tức Nổi Bật
               </h2>
             </Link>
             <Link 
               href="/tin-tuc" 
-              className="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1 group"
+              className="text-xs font-bold text-indigo-600 hover:text-cyan-600 flex items-center gap-1 group"
             >
               <span>Xem tất cả</span>
               <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
@@ -476,13 +476,13 @@ export default async function HomePage() {
           <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-3.5">
             <div className="flex items-center gap-2">
               <span className="text-lg sm:text-xl">🏆</span>
-              <h2 className="font-extrabold text-sm sm:text-base text-[#1e3a8a] uppercase tracking-wide">
+              <h2 className="font-extrabold text-sm sm:text-base bg-gradient-to-r from-indigo-700 to-blue-600 bg-clip-text text-transparent uppercase tracking-wide">
                 Thử Thách Cùng Bạn
               </h2>
             </div>
             <Link 
               href="/khao-thi" 
-              className="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-indigo-600 hover:text-cyan-600 flex items-center gap-1"
             >
               <span>Xem thêm</span>
               <ArrowRight className="w-3 h-3" />
@@ -490,7 +490,7 @@ export default async function HomePage() {
           </div>
 
           {/* CARD XANH GRADIENT HOÀNG GIA - CHIẾM TRỌN THÂN THẺ */}
-          <div className="relative rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-[#1e3a8a] via-[#1d4ed8] to-[#2563eb] text-white shadow-md overflow-hidden flex flex-col justify-between flex-1 min-h-[220px]">
+          <div className="relative rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-indigo-900 via-indigo-700 to-cyan-600 text-white shadow-md shadow-indigo-500/20 overflow-hidden flex flex-col justify-between flex-1 min-h-[220px]">
             
             {/* HỌA TIẾT BÓNG MỜ & HÌNH LINH VẬT CHECKLIST */}
             <div className="absolute -right-2 -bottom-2 w-36 h-36 sm:w-44 sm:h-44 pointer-events-none select-none">
@@ -503,7 +503,7 @@ export default async function HomePage() {
 
             {/* NỘI DUNG VĂN BẢN TRẮC NGHIỆM */}
             <div className="relative z-10 space-y-2 max-w-[170px] sm:max-w-[210px]">
-              <span className="inline-block text-[9px] font-black uppercase tracking-wider bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full text-sky-100">
+              <span className="inline-block text-[9px] font-black uppercase tracking-wider bg-white/20 backdrop-blur-sm px-2.5 py-0.5 rounded-full text-cyan-100">
                 KIẾN THỨC HÔM NAY - AN TOÀN NGÀY MAI!
               </span>
 
@@ -511,7 +511,7 @@ export default async function HomePage() {
                 TRẮC NGHIỆM HIỂU ĐÚNG - SỐNG AN TOÀN
               </h3>
 
-              <p className="text-[11px] text-sky-100/90 leading-relaxed font-medium">
+              <p className="text-[11px] text-cyan-100/90 leading-relaxed font-medium">
                 Bạn đã sẵn sàng? Kiểm tra hiểu biết của mình ngay để bảo vệ bản thân và bạn bè.
               </p>
             </div>
@@ -520,7 +520,7 @@ export default async function HomePage() {
             <div className="relative z-10 pt-3">
               <Link
                 href="/khao-thi"
-                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-[#ef4444] to-[#f97316] hover:from-[#dc2626] hover:to-[#ea580c] text-white font-extrabold text-xs px-4 py-2 rounded-full shadow-md shadow-red-500/30 hover:scale-105 active:scale-95 transition-all"
+                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-900 font-black text-xs px-4 py-2 rounded-full shadow-md shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all"
               >
                 <span>Bắt đầu ngay</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -535,24 +535,24 @@ export default async function HomePage() {
         {/* ----------------------------------------------------------------------- */}
         {/* CỘT 3: CHATBOT AI (~21.7% CHIỀU RỘNG, THẺ XANH NHẸ & ROBOT BÊN TRÁI)     */}
         {/* ----------------------------------------------------------------------- */}
-        <div className="bg-gradient-to-b from-[#e0f2fe]/60 via-sky-50/40 to-white rounded-3xl p-4 sm:p-5 border border-sky-200/80 shadow-sm flex flex-col justify-between">
+        <div className="bg-gradient-to-b from-indigo-50/90 via-sky-50/50 to-white rounded-3xl p-4 sm:p-5 border border-indigo-100 shadow-sm flex flex-col justify-between">
           
           {/* HEADER CỘT */}
-          <div className="flex items-center justify-between border-b border-sky-100/80 pb-2.5 mb-2.5">
+          <div className="flex items-center justify-between border-b border-indigo-100/80 pb-2.5 mb-2.5">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full overflow-hidden bg-white border border-sky-200 shrink-0 shadow-2xs">
-                <img src="/trolyai.png" alt="Trợ lý AI" className="w-full h-full object-cover object-top" />
+              <div className="w-7 h-7 rounded-full overflow-hidden bg-white border border-indigo-200 shrink-0 shadow-2xs">
+                <img src="/trolyai.png" alt="Trợ lý AI" className="w-full h-full object-cover object-center" />
               </div>
               <div>
-                <h2 className="font-extrabold text-xs sm:text-sm text-[#1e3a8a] uppercase tracking-wide">
-                  CHATBOT AI
+                <h2 className="font-extrabold text-xs sm:text-sm bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent uppercase tracking-wide">
+                  CỐ VẤN AI
                 </h2>
                 <p className="text-[10px] text-slate-500 font-medium">Người bạn luôn bên bạn</p>
               </div>
             </div>
             <Link 
               href="/hoi-trang-ti" 
-              className="text-[#0284c7] hover:translate-x-0.5 transition-transform"
+              className="text-indigo-600 hover:text-cyan-600 hover:translate-x-0.5 transition-all"
               title="Đến trang Chatbot"
             >
               <ArrowRight className="w-4 h-4" />
@@ -567,20 +567,20 @@ export default async function HomePage() {
                 <img
                   src="/trolyai.png"
                   alt="Trợ lý AI"
-                  className="w-full h-full object-contain filter drop-shadow-md"
+                  className="w-full h-full object-contain filter drop-shadow-md hover:scale-105 transition-transform"
                 />
               </div>
 
               {/* BONG BÓNG LỜI THOẠI TRỢ LÝ */}
-              <div className="relative bg-white border border-sky-200 rounded-2xl p-2.5 text-xs text-slate-700 shadow-xs flex-1">
-                <p className="font-bold text-slate-800 text-[11px] leading-snug">
+              <div className="relative bg-white border border-indigo-200/80 rounded-2xl p-2.5 text-xs text-slate-700 shadow-xs flex-1">
+                <p className="font-bold text-indigo-950 text-[11px] leading-snug">
                   Bạn có thắc mắc về ma túy?
                 </p>
                 <p className="text-[10px] text-slate-500 mt-1 leading-snug">
                   Mình luôn sẵn sàng trả lời!
                 </p>
                 {/* Mũi tên bong bóng nhô sang trái chỉ vào robot */}
-                <div className="absolute top-1/2 -left-1.5 -translate-y-1/2 w-2.5 h-2.5 bg-white border-b border-l border-sky-200 rotate-45" />
+                <div className="absolute top-1/2 -left-1.5 -translate-y-1/2 w-2.5 h-2.5 bg-white border-b border-l border-indigo-200 rotate-45" />
               </div>
             </div>
           </div>
@@ -589,7 +589,7 @@ export default async function HomePage() {
           <div className="pt-2">
             <Link
               href="/hoi-trang-ti"
-              className="w-full inline-flex items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] text-white font-extrabold text-xs sm:text-sm py-2 sm:py-2.5 rounded-full shadow-md shadow-sky-500/25 hover:scale-[1.02] active:scale-98 transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 hover:opacity-95 text-white font-extrabold text-xs sm:text-sm py-2 sm:py-2.5 rounded-full shadow-md shadow-indigo-500/25 hover:scale-[1.02] active:scale-98 transition-all"
             >
               <span>Chat ngay</span>
               <ArrowRight className="w-4 h-4" />
@@ -682,16 +682,16 @@ export default async function HomePage() {
       {/* ========================================================================= */}
       {/* 5. BANNER ĐẤU TRƯỜNG TRÒ CHƠI HỌC ĐƯỜNG                                   */}
       {/* ========================================================================= */}
-      <section className="bg-gradient-to-r from-[#1e3a8a] via-[#0284c7] to-[#0369a1] text-white rounded-3xl p-5 sm:p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-indigo-950 via-indigo-800 to-blue-700 text-white rounded-3xl p-5 sm:p-6 shadow-md shadow-indigo-950/20 flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden border border-indigo-700/50">
         <div className="space-y-2 z-10 max-w-xl text-center md:text-left">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-sky-200 text-xs font-bold border border-white/20">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-amber-300 text-xs font-bold border border-white/20">
             <Gamepad2 className="w-3.5 h-3.5 text-amber-300" />
             <span>Tổ Hợp 8 Trò Chơi Giáo Dục Mới</span>
           </div>
           <h2 className="text-base sm:text-xl font-black uppercase tracking-tight text-white">
             Đấu Trường Trò Chơi: Vừa Học Vừa Chơi - Tôi Rèn Bản Lĩnh!
           </h2>
-          <p className="text-xs text-sky-100 leading-relaxed font-medium">
+          <p className="text-xs text-indigo-100 leading-relaxed font-medium">
             Khám phá 8 mini game hấp dẫn: <b>Thám Tử Lật Thẻ</b>, <b>Vệ Binh Phản Xạ 45s</b>, <b>Đấu Trí Tình Huống</b>, <b>Bắn Phá Bóng Độc</b>, <b>Từ Khóa Bí Mật</b>, <b>Đúng Hay Sai 30s</b>, <b>Vòng Quay Bản Lĩnh</b> và <b>Chiến Dịch Phân Loại</b>.
           </p>
         </div>
@@ -699,16 +699,17 @@ export default async function HomePage() {
         <div className="flex flex-col sm:flex-row items-center gap-2.5 z-10 shrink-0 w-full sm:w-auto">
           <Link
             href="/tro-choi"
-            className="w-full sm:w-auto px-5 py-2.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-amber-950 font-black text-xs shadow-md transition-all text-center flex items-center justify-center gap-1.5 active:scale-95 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-950 font-black text-xs sm:text-sm shadow-lg shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer"
           >
-            <Sparkles className="w-4 h-4 text-amber-900" />
+            <Sparkles className="w-4 h-4 text-slate-950" />
             <span>Vào Chơi Ngay (8 Game)</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
         {/* NỀN TRANG TRÍ HÌNH HỌC */}
-        <div className="absolute -right-6 -bottom-6 w-36 h-36 bg-white/10 rounded-full blur-xl pointer-events-none" />
+        <div className="absolute -right-6 -bottom-6 w-48 h-48 bg-cyan-400/20 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -left-6 -top-6 w-48 h-48 bg-indigo-500/20 rounded-full blur-2xl pointer-events-none" />
       </section>
 
 
