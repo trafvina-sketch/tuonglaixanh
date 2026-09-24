@@ -6,13 +6,70 @@ import { Film, ShieldCheck, PlayCircle, Video as VideoIcon } from "lucide-react"
 export const revalidate = 0; // Dynamic fetch
 export const dynamic = "force-dynamic";
 
+const DEFAULT_VIDEOS = [
+  {
+    id: "v1",
+    youtube_id: "lCCc0vcG2ww",
+    youtube_url: "https://www.youtube.com/watch?v=lCCc0vcG2ww",
+    title: 'Ma túy "tấn công" học sinh và ẩn khuất dưới nhiều vỏ bọc',
+    description: 'Phóng sự điều tra VTV24 về thủ đoạn tinh vi của tội phạm ma túy nhắm vào giới trẻ và các biện pháp bảo vệ học đường.',
+    category: 'canh_bao',
+    order_index: 1,
+  },
+  {
+    id: "v2",
+    youtube_id: "YBaNAxRqoWE",
+    youtube_url: "https://www.youtube.com/watch?v=YBaNAxRqoWE",
+    title: 'Mối nguy ma túy "đội lốt" thuốc lá điện tử xâm nhập học đường',
+    description: 'Cảnh báo về các loại tinh dầu thuốc lá điện tử trộn cần sa tổng hợp (ADB-BUTINACA) khiến nhiều học sinh ngộ độc, loạn thần.',
+    category: 'canh_bao',
+    order_index: 2,
+  },
+  {
+    id: "v3",
+    youtube_id: "MNJ04_MhS3E",
+    youtube_url: "https://www.youtube.com/watch?v=MNJ04_MhS3E",
+    title: 'Ma túy núp bóng thực phẩm, đồ uống tấn công giới trẻ',
+    description: 'Truyền hình Công an Nhân dân (ANTV) vạch trần các loại "nước vui", "trà sữa", kẹo dẻo tẩm chất ma túy cực độc.',
+    category: 'canh_bao',
+    order_index: 3,
+  },
+  {
+    id: "v4",
+    youtube_id: "oD3amXjoeAs",
+    youtube_url: "https://www.youtube.com/watch?v=oD3amXjoeAs",
+    title: 'Cảnh báo nguy cơ học sinh ngộ độc ma túy ngụy trang',
+    description: 'Phân tích các triệu chứng ngộ độc cấp tính và hướng dẫn sơ cứu khẩn cấp cho học sinh và giáo viên khi phát hiện bạn bè ngộ độc.',
+    category: 'ky_nang',
+    order_index: 4,
+  },
+  {
+    id: "v5",
+    youtube_id: "xlwoAeZtTvM",
+    youtube_url: "https://www.youtube.com/watch?v=xlwoAeZtTvM",
+    title: 'Ma túy mới "đầu độc" giới trẻ - Cảnh giác học đường',
+    description: 'Tiếng chuông báo động về những chất gây nghiện thế hệ mới và kỹ năng tự vệ "4 Không" của học sinh.',
+    category: 'ky_nang',
+    order_index: 5,
+  },
+  {
+    id: "v6",
+    youtube_id: "K0G0jm40NBw",
+    youtube_url: "https://www.youtube.com/watch?v=K0G0jm40NBw",
+    title: 'Học sinh THPT nghiện ma túy - 1 thực trạng buồn và bài học thức tỉnh',
+    description: 'Câu chuyện có thật về những vết trượt dài do tò mò và hành trình tìm lại ánh sáng tương lai của các bạn trẻ.',
+    category: 'ky_nang',
+    order_index: 6,
+  },
+];
+
 export default async function VideoPage() {
   const { data: items } = await supabase
     .from("videos")
     .select("*")
     .order("order_index", { ascending: true });
 
-  const videos = items || [];
+  const videos = items && items.length > 0 ? items : DEFAULT_VIDEOS;
 
   return (
     <div className="space-y-6 sm:space-y-8">

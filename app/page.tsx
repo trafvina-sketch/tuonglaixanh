@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import MiniQuizWidget from "@/components/MiniQuizWidget";
 import CommunitySpread from "@/components/CommunitySpread";
-import { extractYouTubeId } from "@/components/YouTubeEmbed";
+import YouTubeEmbed, { extractYouTubeId } from "@/components/YouTubeEmbed";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
@@ -189,17 +189,12 @@ export default async function HomePage() {
     .limit(3);
 
   const featuredVideo = dbVideos && dbVideos.length > 0 ? dbVideos[0] : null;
-  const featuredVideoYtId = featuredVideo
-    ? extractYouTubeId(featuredVideo.youtube_id || featuredVideo.youtube_url)
-    : "";
-  const featuredVideoThumb = featuredVideoYtId
-    ? `https://img.youtube.com/vi/${featuredVideoYtId}/hqdefault.jpg`
-    : "/images/video_thumb_future.png";
+  const featuredVideoYtId = (featuredVideo && extractYouTubeId(featuredVideo.youtube_id || featuredVideo.youtube_url)) || "lCCc0vcG2ww";
   const featuredVideoTitle = featuredVideo
     ? featuredVideo.title
-    : "Đừng để ma túy vụt mất tương lai";
+    : 'Ma túy "tấn công" học sinh và ẩn khuất dưới nhiều vỏ bọc (VTV24)';
   const featuredVideoCategory =
-    featuredVideo?.category === "canh_bao" ? "Cảnh báo khẩn" : "Phim tuyên truyền";
+    featuredVideo?.category === "canh_bao" ? "Cảnh báo khẩn" : "Phóng sự VTV24";
 
   return (
     <div className="space-y-6 sm:space-y-8 pb-12">
@@ -607,53 +602,43 @@ export default async function HomePage() {
       <section className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6">
         
         {/* VIDEO NỔI BẬT (3 CỘT) */}
-        <div className="md:col-span-3 bg-white rounded-3xl p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-3">
+        <div className="md:col-span-3 bg-white rounded-3xl p-4 sm:p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-3">
           <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
             <div className="flex items-center gap-2">
               <span className="text-rose-500 font-bold">▶️</span>
               <h3 className="font-extrabold text-xs uppercase text-[#1e3a8a] tracking-wide">
-                Video Nổi Bật
+                Video Phóng Sự
               </h3>
             </div>
             <Link href="/video" className="text-[11px] font-bold text-[#0284c7] hover:underline">
-              Xem thêm →
+              Xem tất cả (6 video) →
             </Link>
           </div>
 
-          {/* THUMBNAIL VIDEO DẠNG CUỘN PHIM TỪ DỮ LIỆU THẬT */}
-          <Link href="/video" className="group relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/9] shadow-sm block">
-            <img
-              src={featuredVideoThumb}
-              alt={featuredVideoTitle}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
-            />
-            {/* Lớp viền phim & chữ trên video */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-between p-2.5">
-              <div className="self-end bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
+          {/* NHÚNG TRỰC TIẾP VIDEO YOUTUBE PHÁT NGAY TRÊN TRANG CHỦ */}
+          <div className="space-y-2">
+            <div className="rounded-2xl overflow-hidden shadow-xs border border-slate-200 bg-slate-900 aspect-video">
+              <YouTubeEmbed urlOrId={featuredVideoYtId} title={featuredVideoTitle} />
+            </div>
+            <div>
+              <span className="inline-block text-[9px] font-bold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200 mb-1">
                 {featuredVideoCategory}
-              </div>
-              <div className="space-y-1">
-                <div className="w-8 h-8 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-rose-600 transition-all mx-auto shadow-md">
-                  <Play className="w-3.5 h-3.5 fill-white ml-0.5" />
-                </div>
-                <p className="text-[11px] font-extrabold text-white text-center uppercase tracking-wide leading-tight line-clamp-2 px-1">
-                  {featuredVideoTitle}
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          {/* HIỂN THỊ VIDEO KẾ TIẾP NẾU CÓ */}
-          {dbVideos && dbVideos.length > 1 && (
-            <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-              <span className="font-semibold text-slate-700 truncate max-w-[190px]">
-                Xem thêm: {dbVideos[1].title}
               </span>
-              <Link href="/video" className="text-[#0284c7] font-bold hover:underline shrink-0">
-                Xem ngay &rarr;
-              </Link>
+              <p className="text-[11px] font-bold text-slate-800 leading-snug line-clamp-2">
+                {featuredVideoTitle}
+              </p>
             </div>
-          )}
+          </div>
+
+          {/* HIỂN THỊ LINK KHO VIDEO CHÍNH THỐNG */}
+          <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
+            <span className="font-semibold text-slate-500">
+              Nguồn VTV24 & ANTV
+            </span>
+            <Link href="/video" className="text-[#0284c7] font-bold hover:underline shrink-0">
+              Xem 6 video &rarr;
+            </Link>
+          </div>
         </div>
 
 

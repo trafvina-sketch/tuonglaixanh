@@ -32,9 +32,9 @@ export default function YouTubeEmbed({ urlOrId, title = "Video tuyên truyền" 
   }
 
   return (
-    <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-[#1E1B18] shadow-[3px_3px_0px_#1E1B18] bg-[#1E1B18]">
+    <div className="relative aspect-video rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-black">
       <iframe
-        src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`}
+        src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
